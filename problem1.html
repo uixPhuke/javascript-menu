@@ -1,0 +1,24 @@
+<body>
+
+    <button onclick="myFunction(this);">
+        Test attribute!
+    </button>
+
+    <script type="text/javascript">
+
+        function myFunction(button) {
+
+            var newAttr = document.createAttribute("myAttribute");
+
+            newAttr.value = "My Value";
+
+            button.setAttributeNode(newAttr);
+
+            document.write(
+                button.getAttribute("myAttribute")
+            );
+        }
+
+    </script>
+
+</body>

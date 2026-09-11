@@ -1,0 +1,29 @@
+<html>
+
+<body>
+    <h1>Javascript</h1>
+    <p>This is a sample HTML page.</p>
+    <div id="content"></div>
+
+
+
+</body>
+<script>
+    var para = document.createElement("p");
+    para.innerHTML = "This is a paragraph created using JavaScript.";
+    document.getElementById("content").appendChild(para);
+    //view 2
+    //new pera added 
+    document.write(document.getElementById("content").innerHTML);
+    document.write("VIEW: <br/>");
+
+    document.write(document.getElementsByTagName("p")[0].innerHTML);
+    document.write("<br/>");
+
+    document.write(document.getElementsByTagName("p")[1].innerHTML);
+    document.write("<br/> length is : ");
+    document.write(document.getElementsByTagName("p").length);
+
+</script>
+
+</html> 
