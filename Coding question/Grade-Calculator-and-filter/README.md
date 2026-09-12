@@ -1,77 +1,90 @@
 # 🎓 Student Result Manager
 
-```{=html}
 <p align="center">
-```
-`<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=36BCF7&center=true&vCenter=true&width=650&lines=Student+Result+Manager;JavaScript+DOM+Practice;Add+%7C+Classify+%7C+Filter+Students" alt="Typing animation" />`{=html}
-```{=html}
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=36BCF7&center=true&vCenter=true&width=750&lines=Student+Result+Manager;JavaScript+DOM+Practice;Add+Students+%7C+Pass+%7C+Fail+%7C+Filter"
+    alt="Typing Animation"
+  >
 </p>
-```
-```{=html}
+
 <p align="center">
-```
-`<b>`{=html}🚀 A beginner-friendly JavaScript DOM project designed for
-coding-round practice.`</b>`{=html}
-```{=html}
+  <b>🚀 A JavaScript DOM practice project for dynamically managing student results.</b>
 </p>
-```
-```{=html}
+
 <p align="center">
-```
-`<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">`{=html}
-`<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">`{=html}
-`<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">`{=html}
-```{=html}
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
 </p>
-```
 
-------------------------------------------------------------------------
+<p align="center">
+  <img src="https://img.shields.io/badge/DOM-Manipulation-36BCF7?style=flat-square" alt="DOM">
+  <img src="https://img.shields.io/badge/Level-Beginner%20%7C%20Intermediate-success?style=flat-square" alt="Level">
+  <img src="https://img.shields.io/badge/Purpose-Placement%20Prep-orange?style=flat-square" alt="Placement Prep">
+</p>
 
-## ✨ Project Overview
+---
 
-The **Student Result Manager** is a small interactive web application
-where users can:
+## 📌 Project Overview
 
--   👤 Enter a student's name
--   📝 Enter marks between `0` and `100`
--   ✅ Automatically classify the student as **PASS**
--   ❌ Automatically classify the student as **FAIL**
--   📋 Dynamically add students to a table
--   🔎 Filter students by **All / Pass / Fail**
--   🧹 Automatically clear the input fields after adding a student
+This project implements a simple **Student Result Manager** using HTML, CSS, and JavaScript.
 
-The main purpose is not the UI --- it is to practice **JavaScript DOM
-manipulation and logic**.
+The application allows the user to:
 
-------------------------------------------------------------------------
+- Enter a student's name
+- Enter marks
+- Add the student dynamically to a table
+- Automatically determine Pass or Fail
+- Filter students by result status
+- Clear the input fields after adding a student
 
-## 🎯 Learning Objectives
+The main goal is to practice **JavaScript DOM manipulation, validation, dynamic element creation, conditional logic, and event handling**.
 
-After completing this project, you should understand:
+---
 
-  Concept                  What you learn
-  ------------------------ ---------------------------------
-  `getElementById()`       Selecting an HTML element
-  `.value`                 Reading input values
-  `.trim()`                Removing extra spaces
-  `parseInt()`             Converting text to an integer
-  `isNaN()`                Checking invalid numbers
-  `if / else`              Validation and decision making
-  Ternary operator         Short `if / else` logic
-  `createElement()`        Creating HTML using JavaScript
-  `.className`             Assigning CSS classes
-  `.innerHTML`             Inserting HTML dynamically
-  `appendChild()`          Adding an element to the page
-  `querySelectorAll()`     Selecting multiple elements
-  `.forEach()`             Looping through elements
-  `classList.contains()`   Checking whether a class exists
-  `.style.display`         Showing/hiding elements
+## ✨ Features
 
-------------------------------------------------------------------------
+| Feature | Description |
+|---|---|
+| 👤 Student Name | Accepts student name |
+| 📝 Marks | Accepts marks from 0–100 |
+| ➕ Add Student | Dynamically creates a table row |
+| ✅ Pass Status | Marks `>= 40` |
+| ❌ Fail Status | Marks `< 40` |
+| 🔍 Filter | Show All, Pass Only, or Fail Only |
+| 🛡️ Validation | Rejects invalid names and marks |
+| 🧹 Clear Inputs | Resets fields after successful insertion |
+| ⚡ Dynamic DOM | Updates table without page refresh |
+
+---
+
+# 🎯 Learning Objectives
+
+| JavaScript Concept | Purpose |
+|---|---|
+| `function` | Create reusable functionality |
+| `getElementById()` | Select HTML elements |
+| `.value` | Read input values |
+| `.trim()` | Remove unnecessary spaces |
+| `parseInt()` | Convert text to integer |
+| `isNaN()` | Check whether a value is a number |
+| `if` | Validate and make decisions |
+| `return` | Stop function execution |
+| Ternary operator | Quickly choose Pass/Fail |
+| `createElement()` | Create HTML elements dynamically |
+| `.className` | Assign CSS classes |
+| `.innerHTML` | Insert HTML content |
+| `appendChild()` | Add elements to the DOM |
+| `querySelectorAll()` | Select multiple rows |
+| `forEach()` | Loop through rows |
+| `.classList.contains()` | Check a CSS class |
+| `.style.display` | Show/hide rows |
+
+---
 
 # 📁 Project Structure
 
-``` text
+```text
 student-result-manager/
 │
 ├── index.html
@@ -80,857 +93,1355 @@ student-result-manager/
 └── README.md
 ```
 
-### Responsibilities of each file
+### File Responsibilities
 
-``` text
+```text
 index.html
-   ↓
-Page structure
+     ↓
+Input Form + Filter + Table
 
 style.css
-   ↓
-Appearance / styling
+     ↓
+Page Appearance + Pass/Fail Styling
 
 app.js
-   ↓
-Logic / interaction
+     ↓
+Validation + Student Creation + Filtering
 
 README.md
-   ↓
-Documentation
+     ↓
+Project Documentation
 ```
 
-------------------------------------------------------------------------
+---
 
-# 🧠 How the JavaScript Works
+# 🧠 JavaScript Architecture
 
-The JavaScript has **two main functions**:
+The application has two main functions:
 
-``` js
+```js
 addStudent()
-filterStudents()
+filterStudents(value)
 ```
 
-------------------------------------------------------------------------
+They perform two different jobs.
+
+```text
+                 USER ENTERS DATA
+                        │
+                        ▼
+                  Add Student
+                        │
+                        ▼
+                  addStudent()
+                        │
+                ┌───────┴───────┐
+                ▼               ▼
+            Validate        Calculate
+             input           status
+                │               │
+                └───────┬───────┘
+                        ▼
+                Create table row
+                        │
+                        ▼
+                  Add to DOM
+                        │
+                        ▼
+                  Clear inputs
+
+
+                 USER SELECTS FILTER
+                        │
+                        ▼
+                filterStudents()
+                        │
+                        ▼
+                 Check each row
+                        │
+                        ▼
+                  Show / Hide
+```
+
+---
 
 # 1️⃣ `addStudent()`
 
-The `addStudent()` function runs when the user clicks:
+```js
+function addStudent() {
 
-``` text
-Add Student
+    // student creation logic
+
+}
 ```
 
-### Complete flow
+This function handles the complete process of adding one student.
 
-``` text
-User enters Name + Marks
-          ↓
-       Read input
-          ↓
-       Validate data
-          ↓
-    ┌─────┴─────┐
-    │           │
- Invalid      Valid
-    │           │
- Alert          ↓
- Return     Determine status
-                ↓
-          Create <tr>
-                ↓
-          Add <td> cells
-                ↓
-          Append to table
-                ↓
-          Clear inputs
+It performs:
+
+```text
+Read Input
+   ↓
+Validate Input
+   ↓
+Determine Status
+   ↓
+Create Row
+   ↓
+Insert Data
+   ↓
+Append Row
+   ↓
+Clear Inputs
 ```
 
-------------------------------------------------------------------------
+---
 
-## Step 1 --- Read the name
+# 2️⃣ Read Student Name
 
-``` js
-const name = document.getElementById('studentName').value.trim();
+```js
+const name = document.getElementById('sName').value.trim();
 ```
 
-### Breakdown
+Let's break this down.
 
-``` js
-document
+### `getElementById()`
+
+```js
+document.getElementById('sName');
 ```
 
-represents the current HTML document.
+Finds the input whose ID is:
 
-``` js
-.getElementById('studentName')
+```html
+id="sName"
 ```
 
-finds the input with that ID.
+### `.value`
 
-``` js
-.value
+```js
+document.getElementById('sName').value;
 ```
 
 gets what the user typed.
 
-``` js
-.trim()
-```
+For example:
 
-removes spaces from the beginning and end.
+```text
+User types:
 
-### Example
+Rahul
 
-``` js
-"   Rahul   ".trim()
-```
-
-becomes:
-
-``` text
+value
+  ↓
 "Rahul"
 ```
 
-------------------------------------------------------------------------
+### `.trim()`
 
-# Step 2 --- Read the marks
-
-``` js
-const marks = parseInt(
-    document.getElementById('studentMarks').value
-);
-```
-
-Input values are received as text, so we convert them to an integer.
-
-``` js
-parseInt("85")
+```js
+"   Rahul   ".trim();
 ```
 
 becomes:
 
-``` text
-85
+```text
+"Rahul"
 ```
 
-Now JavaScript can perform numerical comparisons:
+It removes unnecessary spaces from the beginning and end.
 
-``` js
-marks >= 40
-marks < 0
-marks > 100
+---
+
+# 3️⃣ Read Marks
+
+```js
+const marks = parseInt(
+    document.getElementById('sMarks').value
+);
 ```
 
-------------------------------------------------------------------------
+The input value normally comes as text.
 
-# Step 3 --- Validate the input
+For example:
 
-``` js
+```text
+"75"
+```
+
+Using:
+
+```js
+parseInt("75");
+```
+
+gives:
+
+```text
+75
+```
+
+Now JavaScript can compare the marks numerically.
+
+---
+
+# 4️⃣ Validate the Input
+
+```js
 if (!name || isNaN(marks) || marks < 0 || marks > 100) {
-    alert("Invalid name or marks");
+    alert('Enter valid name and marks (0-100)');
     return;
 }
 ```
 
-There are four checks.
+This is one of the most important parts of the program.
 
-### `!name`
+It checks four conditions.
 
-Checks whether the name is empty.
+---
 
-``` text
-name = ""
-!name → true
-```
+## Condition 1: `!name`
 
-### `isNaN(marks)`
-
-Checks whether marks are not a valid number.
-
-``` js
-isNaN(85)   // false
-isNaN(NaN)  // true
-```
-
-### `marks < 0`
-
-Prevents negative marks.
-
-### `marks > 100`
-
-Prevents marks above 100.
-
-------------------------------------------------------------------------
-
-## Why `||`?
-
-`||` means **OR**.
-
-``` js
-A || B || C || D
-```
-
-If **any one** condition is true, the entire condition becomes true.
-
-Example:
-
-``` text
-Name = Rahul
-Marks = 105
-
-!name          → false
-isNaN(marks)   → false
-marks < 0      → false
-marks > 100    → true
-
-false || false || false || true
-                  ↓
-                true
-```
-
-The input is rejected.
-
-------------------------------------------------------------------------
-
-# Step 4 --- Stop with `return`
-
-``` js
-return;
-```
-
-`return` immediately stops the function.
-
-Without it, JavaScript would continue executing the code after the
-validation error.
-
-``` text
-Invalid input
-     ↓
-   alert
-     ↓
-  return
-     ↓
- STOP
-```
-
-------------------------------------------------------------------------
-
-# Step 5 --- Determine Pass or Fail
-
-``` js
-const status = marks >= 40 ? 'pass' : 'fail';
-```
-
-This is the **ternary operator**.
-
-General syntax:
-
-``` js
-condition ? valueIfTrue : valueIfFalse
-```
-
-So:
-
-``` js
-marks >= 40 ? 'pass' : 'fail'
+```js
+!name
 ```
 
 means:
 
-``` text
-marks >= 40?
-    │
-    ├── YES → pass
-    │
-    └── NO  → fail
+> Is the name empty?
+
+Example:
+
+```text
+name = ""
 ```
 
-### Examples
+Then:
 
-``` js
+```text
+!name
+ ↓
+true
+```
+
+The input is invalid.
+
+---
+
+## Condition 2: `isNaN(marks)`
+
+```js
+isNaN(marks)
+```
+
+means:
+
+> Is marks Not a Number?
+
+For example:
+
+```js
+isNaN(75);
+```
+
+returns:
+
+```text
+false
+```
+
+But an invalid numeric value can produce:
+
+```text
+true
+```
+
+---
+
+## Condition 3: `marks < 0`
+
+```js
+marks < 0
+```
+
+prevents negative marks.
+
+Example:
+
+```text
+marks = -10
+
+-10 < 0
+     ↓
+true
+```
+
+Invalid.
+
+---
+
+## Condition 4: `marks > 100`
+
+```js
+marks > 100
+```
+
+prevents marks above 100.
+
+Example:
+
+```text
+marks = 150
+
+150 > 100
+     ↓
+true
+```
+
+Invalid.
+
+---
+
+# 5️⃣ Why `return`?
+
+```js
+return;
+```
+
+stops the function immediately.
+
+Without `return`, the program could continue creating a student row even after invalid input.
+
+Think:
+
+```text
+Invalid input
+     ↓
+alert()
+     ↓
+return
+     ↓
+STOP
+```
+
+---
+
+# 6️⃣ Determine Pass or Fail
+
+```js
+const status = marks >= 40 ? 'pass' : 'fail';
+```
+
+This uses the **ternary operator**.
+
+General syntax:
+
+```js
+condition ? valueIfTrue : valueIfFalse
+```
+
+Here:
+
+```text
+marks >= 40
+```
+
+is the condition.
+
+If true:
+
+```text
+'pass'
+```
+
+If false:
+
+```text
+'fail'
+```
+
+Example:
+
+```text
+marks = 75
+
 75 >= 40
+     ↓
+true
+     ↓
+pass
 ```
 
-→ `pass`
+Another example:
 
-``` js
+```text
+marks = 25
+
 25 >= 40
+     ↓
+false
+     ↓
+fail
 ```
 
-→ `fail`
+Equivalent `if/else` version:
 
-------------------------------------------------------------------------
+```js
+let status;
 
-# Step 6 --- Create a table row
-
-``` js
-const row = document.createElement('tr');
+if (marks >= 40) {
+    status = 'pass';
+} else {
+    status = 'fail';
+}
 ```
 
-This creates a new HTML element using JavaScript.
+---
 
-It creates:
+# 7️⃣ Create a Table Row
 
-``` html
-<tr></tr>
+```js
+const tr = document.createElement('tr');
 ```
 
-At this moment, the row is **not yet visible** on the page.
+This creates a new `<tr>` element using JavaScript.
 
-It only exists in JavaScript memory.
+It exists in memory initially.
 
-------------------------------------------------------------------------
+```text
+JavaScript
+    ↓
+createElement('tr')
+    ↓
+New <tr>
+```
 
-# Step 7 --- Give the row a class
+It is not visible on the webpage until it is added to the DOM.
 
-``` js
-row.className = status;
+---
+
+# 8️⃣ Assign the Status Class
+
+```js
+tr.className = status;
 ```
 
 If:
 
-``` js
-status = "pass";
+```text
+status = "pass"
 ```
 
 then:
 
-``` html
+```html
 <tr class="pass">
 ```
 
 If:
 
-``` js
-status = "fail";
+```text
+status = "fail"
 ```
 
 then:
 
-``` html
+```html
 <tr class="fail">
 ```
 
-This is useful because CSS can style the two statuses differently.
+This allows CSS to style the row differently.
 
-------------------------------------------------------------------------
+---
 
-# Step 8 --- Insert the student's data
+# 9️⃣ Insert Table Cells
 
-``` js
-row.innerHTML = `
+```js
+tr.innerHTML = `
     <td>${name}</td>
     <td>${marks}</td>
     <td class="${status}">${status.toUpperCase()}</td>
 `;
 ```
 
-The backticks create a **template literal**.
+This is a very important JavaScript pattern.
 
-`${...}` allows JavaScript variables to be inserted into the HTML.
+---
+
+## Template Literals
+
+The backticks:
+
+```js
+`
+`
+```
+
+allow us to write multi-line strings.
+
+They also allow:
+
+```js
+${variable}
+```
+
+to insert JavaScript values into the string.
+
+---
+
+## `${name}`
 
 If:
 
-``` js
-name = "Rahul";
-marks = 85;
-status = "pass";
+```text
+name = "Rahul"
 ```
 
-the generated HTML becomes approximately:
+then:
 
-``` html
-<tr class="pass">
-    <td>Rahul</td>
-    <td>85</td>
-    <td class="pass">PASS</td>
-</tr>
+```html
+<td>${name}</td>
 ```
 
-------------------------------------------------------------------------
+becomes:
 
-# Step 9 --- `toUpperCase()`
-
-``` js
-status.toUpperCase()
+```html
+<td>Rahul</td>
 ```
 
-converts:
+---
 
-``` text
-pass
+## `${marks}`
+
+If:
+
+```text
+marks = 75
 ```
 
-into:
+then:
 
-``` text
+```html
+<td>${marks}</td>
+```
+
+becomes:
+
+```html
+<td>75</td>
+```
+
+---
+
+## `${status}`
+
+If:
+
+```text
+status = "pass"
+```
+
+then:
+
+```html
+class="${status}"
+```
+
+becomes:
+
+```html
+class="pass"
+```
+
+---
+
+# 🔠 Understanding `toUpperCase()`
+
+```js
+status.toUpperCase();
+```
+
+If:
+
+```text
+"pass"
+```
+
+then:
+
+```text
+"PASS"
+```
+
+If:
+
+```text
+"fail"
+```
+
+then:
+
+```text
+"FAIL"
+```
+
+So the table displays:
+
+```text
 PASS
 ```
 
-and:
+or:
 
-``` text
-fail
-```
-
-into:
-
-``` text
+```text
 FAIL
 ```
 
-Notice:
+---
 
-``` text
-class       → pass
-display text → PASS
-```
+# 🔟 Add the Row to the Table
 
-The lowercase class is useful for filtering.
-
-------------------------------------------------------------------------
-
-# Step 10 --- Add the row to the table
-
-``` js
-document.getElementById('studentBody').appendChild(row);
+```js
+document.getElementById('sBody').appendChild(tr);
 ```
 
 First:
 
-``` js
-document.getElementById('studentBody')
+```js
+document.getElementById('sBody');
 ```
 
-finds the table body.
+finds:
+
+```html
+<tbody id="sBody">
+```
 
 Then:
 
-``` js
-.appendChild(row)
+```js
+.appendChild(tr);
 ```
 
 adds the newly created row.
 
-### Remember this pattern
+Think:
 
-``` text
-createElement()
-      ↓
-innerHTML
-      ↓
+```text
+New <tr>
+   ↓
 appendChild()
+   ↓
+<tbody>
+   ↓
+Visible table
 ```
 
-Meaning:
+---
 
-``` text
-Create → Fill → Add to page
+# 1️⃣1️⃣ Clear the Name Input
+
+```js
+document.getElementById('sName').value = '';
 ```
 
-------------------------------------------------------------------------
+After adding the student, the name field becomes empty.
 
-# Step 11 --- Clear the inputs
+Before:
 
-``` js
-document.getElementById('studentName').value = '';
-document.getElementById('studentMarks').value = '';
+```text
+Rahul
 ```
 
-After successfully adding the student, both input fields become empty.
+After:
 
-------------------------------------------------------------------------
-
-# 2️⃣ `filterStudents()`
-
-The second function handles:
-
-``` text
-All
-Pass Only
-Fail Only
+```text
+""
 ```
 
-The function receives the selected value:
+---
 
-``` js
-function filterStudents(value) {
+# 1️⃣2️⃣ Clear the Marks Input
+
+```js
+document.getElementById('sMarks').value = '';
 ```
+
+This clears the marks field.
+
+The user can now enter another student.
+
+---
+
+# 🔍 `filterStudents(value)`
+
+The second function is:
+
+```js
+function filterStudents(val) {
+
+    // filtering logic
+
+}
+```
+
+Its job is to show only the rows matching the selected filter.
 
 Possible values:
 
-``` text
-"all"
-"pass"
-"fail"
+```text
+all
+pass
+fail
 ```
 
-------------------------------------------------------------------------
+---
 
-# Step 1 --- Select all student rows
+# 1️⃣3️⃣ Select All Student Rows
 
-``` js
-document.querySelectorAll('#studentBody tr')
+```js
+document.querySelectorAll('#sBody tr')
 ```
 
-This means:
+This finds every `<tr>` inside:
 
-> Find every `<tr>` inside `#studentBody`.
-
-For example:
-
-``` text
-<tr class="pass">
-<tr class="fail">
-<tr class="pass">
-<tr class="fail">
+```html
+<tbody id="sBody">
 ```
 
-------------------------------------------------------------------------
+Suppose there are:
 
-# Step 2 --- Loop through every row
+```text
+Rahul
+Priya
+Amit
+Sneha
+```
 
-``` js
+Then all four rows are selected.
+
+---
+
+# 1️⃣4️⃣ Loop Through Rows
+
+```js
+.forEach(r => {
+```
+
+`forEach()` executes the code once for every student row.
+
+```text
+Rahul  → execute
+Priya  → execute
+Amit   → execute
+Sneha  → execute
+```
+
+The variable `r` represents the current row.
+
+You could also write:
+
+```js
 .forEach(row => {
 ```
 
-`forEach()` executes the code once for every row.
+which is more descriptive.
 
-``` text
-row 1 → check
-row 2 → check
-row 3 → check
-row 4 → check
+---
+
+# 1️⃣5️⃣ Check the Row's Class
+
+```js
+r.classList.contains(val)
 ```
 
-------------------------------------------------------------------------
+This checks whether the current row contains a particular CSS class.
 
-# Step 3 --- Check the selected filter
+Example:
 
-The core logic is:
-
-``` js
-row.classList.contains(value)
-```
-
-Suppose:
-
-``` html
+```html
 <tr class="pass">
 ```
 
 Then:
 
-``` js
-row.classList.contains('pass')
+```js
+r.classList.contains('pass');
 ```
 
 returns:
 
-``` text
+```text
 true
 ```
 
 But:
 
-``` js
-row.classList.contains('fail')
+```js
+r.classList.contains('fail');
 ```
 
 returns:
 
-``` text
+```text
 false
 ```
 
-So `classList.contains()` asks:
+---
 
-> Does this element have this class?
+# 1️⃣6️⃣ Understand the Filter Condition
 
-------------------------------------------------------------------------
-
-# Step 4 --- Show or hide
-
-The filtering logic can be expressed as:
-
-``` js
-if (value === 'all') {
-    // show row
-}
-else if (row.classList.contains(value)) {
-    // show row
-}
-else {
-    // hide row
-}
-```
-
-Using a ternary operator, the same idea becomes:
-
-``` js
-row.style.display =
-    (value === 'all' || row.classList.contains(value))
+```js
+r.style.display =
+    (val === 'all' || r.classList.contains(val))
         ? ''
         : 'none';
 ```
 
-### Meaning
+This line uses:
 
-``` text
-                 Is filter "all"?
-                       │
-                  YES ─┴─ NO
-                   ↓       ↓
-                 SHOW    Has selected class?
-                              │
-                         YES ─┴─ NO
-                          ↓       ↓
-                        SHOW    HIDE
+- `style.display`
+- `===`
+- `||`
+- `classList.contains()`
+- ternary operator
+
+Let's break it down.
+
+---
+
+## `val === 'all'`
+
+If the user selected:
+
+```text
+All
 ```
 
-------------------------------------------------------------------------
+then:
 
-# 🔥 Complete Logic in One Diagram
-
-``` text
-                  STUDENT MANAGER
-                         │
-             ┌───────────┴───────────┐
-             │                       │
-        addStudent()           filterStudents()
-             │                       │
-       Read inputs             Get filter value
-             │                       │
-         Validate              Get all rows
-             │                       │
-       ┌─────┴─────┐            forEach()
-       │           │                 │
-    Invalid      Valid              ↓
-       │           │          Check row class
-     Alert         ↓                 │
-     Return    Pass / Fail     ┌────┴────┐
-                   │           │         │
-             Create <tr>      Match    No match
-                   │           │         │
-             Add table cells  SHOW      HIDE
-                   │
-             appendChild()
-                   │
-             Clear inputs
+```text
+val = "all"
 ```
 
-------------------------------------------------------------------------
+So:
+
+```js
+val === 'all'
+```
+
+is:
+
+```text
+true
+```
+
+Every row should be visible.
+
+---
+
+## `r.classList.contains(val)`
+
+If the user selected:
+
+```text
+pass
+```
+
+then JavaScript checks:
+
+```js
+r.classList.contains('pass');
+```
+
+Only rows with:
+
+```html
+class="pass"
+```
+
+will match.
+
+---
+
+## `||`
+
+The operator:
+
+```js
+||
+```
+
+means **OR**.
+
+Therefore:
+
+```js
+val === 'all' || r.classList.contains(val)
+```
+
+means:
+
+> Show the row if the user selected All OR if the row has the selected status.
+
+---
+
+# 1️⃣7️⃣ `style.display`
+
+If the condition is true:
+
+```js
+r.style.display = '';
+```
+
+The row is shown.
+
+If false:
+
+```js
+r.style.display = 'none';
+```
+
+The row is hidden.
+
+So:
+
+```text
+Condition true
+     ↓
+display = ''
+     ↓
+SHOW
+
+Condition false
+     ↓
+display = 'none'
+     ↓
+HIDE
+```
+
+---
+
+# 🔥 Complete Filtering Flow
+
+```text
+User selects filter
+        ↓
+filterStudents(value)
+        ↓
+Find all <tr>
+        ↓
+forEach(row)
+        ↓
+Check selected value
+        ↓
+Is value "all"?
+     /       \
+   YES        NO
+    ↓          ↓
+  SHOW      Check class
+               ↓
+        Does class match?
+           /       \
+         YES        NO
+          ↓          ↓
+        SHOW       HIDE
+```
+
+---
 
 # 🧪 Example
 
-### Input
+Suppose the table contains:
 
-``` text
-Name: Rahul
-Marks: 82
+| Name | Marks | Status |
+|---|---:|---|
+| Rahul | 80 | PASS |
+| Priya | 25 | FAIL |
+| Amit | 65 | PASS |
+| Sneha | 30 | FAIL |
+
+If:
+
+```text
+Filter = pass
 ```
 
-JavaScript calculates:
+the application checks every row.
 
-``` js
-status = "pass";
-```
-
-Creates:
-
-``` html
-<tr class="pass">
-    <td>Rahul</td>
-    <td>82</td>
-    <td class="pass">PASS</td>
-</tr>
-```
-
-------------------------------------------------------------------------
-
-### Another student
-
-``` text
-Name: Amit
-Marks: 25
-```
-
-Creates:
-
-``` html
-<tr class="fail">
-    <td>Amit</td>
-    <td>25</td>
-    <td class="fail">FAIL</td>
-</tr>
-```
-
-------------------------------------------------------------------------
-
-### Select "Pass Only"
-
-``` js
-value = "pass";
-```
-
-JavaScript checks:
-
-``` js
-row.classList.contains("pass")
+```text
+Rahul → pass → SHOW
+Priya → fail → HIDE
+Amit  → pass → SHOW
+Sneha → fail → HIDE
 ```
 
 Result:
 
-``` text
-Rahul → true  → SHOW
-Amit  → false → HIDE
-```
+| Name | Marks | Status |
+|---|---:|---|
+| Rahul | 80 | PASS |
+| Amit | 65 | PASS |
 
-------------------------------------------------------------------------
+---
 
-# ⚡ Important JavaScript Patterns to Remember
+# 🧠 Full JavaScript Logic
 
-These patterns are especially useful for beginner DOM coding questions.
+The complete JavaScript is:
 
-### 1. Get input
+```js
+function addStudent() {
 
-``` js
-const value = document.getElementById("id").value;
-```
+    const name =
+        document.getElementById('sName').value.trim();
 
-### 2. Convert input to number
+    const marks =
+        parseInt(document.getElementById('sMarks').value);
 
-``` js
-const num = parseInt(value);
-```
+    if (!name || isNaN(marks) || marks < 0 || marks > 100) {
+        alert('Enter valid name and marks (0-100)');
+        return;
+    }
 
-### 3. Validate
+    const status = marks >= 40 ? 'pass' : 'fail';
 
-``` js
-if (!value || isNaN(num)) {
-    return;
+    const tr = document.createElement('tr');
+
+    tr.className = status;
+
+    tr.innerHTML = `
+        <td>${name}</td>
+        <td>${marks}</td>
+        <td class="${status}">${status.toUpperCase()}</td>
+    `;
+
+    document.getElementById('sBody').appendChild(tr);
+
+    document.getElementById('sName').value = '';
+    document.getElementById('sMarks').value = '';
+}
+
+
+function filterStudents(val) {
+
+    document.querySelectorAll('#sBody tr').forEach(r => {
+
+        r.style.display =
+            (val === 'all' || r.classList.contains(val))
+                ? ''
+                : 'none';
+
+    });
+
 }
 ```
 
-### 4. Conditional value
+---
 
-``` js
-const result = condition ? "yes" : "no";
+# 🔥 Complete Logic Flow
+
+```text
+              ENTER STUDENT DATA
+                       │
+                       ▼
+                  addStudent()
+                       │
+                       ▼
+                 Read name
+                       │
+                       ▼
+                 Read marks
+                       │
+                       ▼
+                  Validate
+                  /      \
+               Invalid    Valid
+                 │          │
+                 ▼          ▼
+               Alert    Determine status
+                 │          │
+                 ▼          ▼
+                STOP     Pass / Fail
+                            │
+                            ▼
+                     Create <tr>
+                            │
+                            ▼
+                    Add table cells
+                            │
+                            ▼
+                     Append to DOM
+                            │
+                            ▼
+                     Clear inputs
+
+
+              SELECT FILTER
+                    │
+                    ▼
+             filterStudents()
+                    │
+                    ▼
+              Find all rows
+                    │
+                    ▼
+                forEach()
+                    │
+                    ▼
+             Check row class
+                    │
+                ┌───┴───┐
+                ▼       ▼
+              Match   No Match
+                │       │
+                ▼       ▼
+              SHOW     HIDE
 ```
 
-### 5. Create element
+---
 
-``` js
-const element = document.createElement("tr");
-```
+# 🎯 What This Coding Question Tests
 
-### 6. Insert HTML
+This question combines many common frontend coding concepts:
 
-``` js
-element.innerHTML = `...`;
-```
-
-### 7. Add to page
-
-``` js
-parent.appendChild(element);
-```
-
-### 8. Select multiple elements
-
-``` js
-document.querySelectorAll("...");
-```
-
-### 9. Loop
-
-``` js
-elements.forEach(element => {
-    // logic
-});
-```
-
-### 10. Check class
-
-``` js
-element.classList.contains("pass");
-```
-
-### 11. Hide element
-
-``` js
-element.style.display = "none";
-```
-
-### 12. Show element
-
-``` js
-element.style.display = "";
-```
-
-------------------------------------------------------------------------
-
-# 🎯 Coding Round Checklist
-
-Before considering this problem complete, verify:
-
--   [ ] Empty name is rejected
--   [ ] Marks below `0` are rejected
--   [ ] Marks above `100` are rejected
--   [ ] Non-numeric marks are rejected
--   [ ] `40` is **PASS**
--   [ ] `39` is **FAIL**
--   [ ] Student row is created dynamically
--   [ ] Correct class is assigned
--   [ ] Inputs are cleared after successful addition
--   [ ] All filter shows everyone
--   [ ] Pass filter shows only pass students
--   [ ] Fail filter shows only fail students
-
-------------------------------------------------------------------------
-
-# 🚀 What This Question Is Testing
-
-This looks like a simple UI, but the coding concepts are important:
-
-``` text
+```text
+DOM Selection
+      +
 Input Handling
+      +
+String Manipulation
+      +
+Number Conversion
       +
 Validation
       +
 Conditional Logic
       +
-DOM Creation
+Ternary Operator
       +
-DOM Manipulation
+Dynamic Element Creation
       +
-Array/NodeList Iteration
+Template Literals
       +
-CSS Class Handling
+DOM Insertion
+      +
+Loops
+      +
+Class Checking
       +
 Dynamic Filtering
+      +
+CSS Manipulation
 ```
 
-Master these patterns and you'll be able to solve many **basic
-JavaScript frontend coding-round questions**, not just this student
-example.
+---
 
-------------------------------------------------------------------------
+# ⭐ Important Patterns to Remember
 
-```{=html}
+## Pattern 1 — Read an Input
+
+```js
+const value =
+    document.getElementById('id').value;
+```
+
+---
+
+## Pattern 2 — Convert Input
+
+```js
+const marks =
+    parseInt(input.value);
+```
+
+---
+
+## Pattern 3 — Validate
+
+```js
+if (invalidCondition) {
+    alert('Invalid');
+    return;
+}
+```
+
+---
+
+## Pattern 4 — Create an Element
+
+```js
+const row = document.createElement('tr');
+```
+
+---
+
+## Pattern 5 — Add HTML
+
+```js
+row.innerHTML = `
+    <td>${value}</td>
+`;
+```
+
+---
+
+## Pattern 6 — Add to Page
+
+```js
+parent.appendChild(row);
+```
+
+---
+
+## Pattern 7 — Find Multiple Elements
+
+```js
+document.querySelectorAll('selector');
+```
+
+---
+
+## Pattern 8 — Loop
+
+```js
+elements.forEach(element => {
+    // logic
+});
+```
+
+---
+
+## Pattern 9 — Check Class
+
+```js
+element.classList.contains('pass');
+```
+
+---
+
+## Pattern 10 — Show / Hide
+
+```js
+element.style.display = '';
+```
+
+```js
+element.style.display = 'none';
+```
+
+---
+
+# 🏆 Accenture Frontend Coding Pattern
+
+When you see a similar question, think:
+
+```text
+USER INPUT
+    ↓
+SELECT ELEMENT
+    ↓
+READ .value
+    ↓
+CONVERT DATA
+    ↓
+VALIDATE
+    ↓
+PROCESS LOGIC
+    ↓
+CREATE / MODIFY DOM
+    ↓
+APPEND / UPDATE
+    ↓
+CLEAR INPUT
+```
+
+For filtering:
+
+```text
+SELECT ALL
+    ↓
+LOOP
+    ↓
+CHECK CONDITION
+    ↓
+SHOW / HIDE
+```
+
+---
+
+# 📝 Quick Revision Cheat Sheet
+
+| Concept | Meaning |
+|---|---|
+| `getElementById()` | Select one element by ID |
+| `.value` | Read input value |
+| `.trim()` | Remove outer spaces |
+| `parseInt()` | Convert text to integer |
+| `isNaN()` | Check for invalid number |
+| `createElement()` | Create an element |
+| `.className` | Assign CSS class |
+| `.innerHTML` | Insert HTML |
+| `${}` | Insert JS value into template literal |
+| `appendChild()` | Add child to DOM |
+| `querySelectorAll()` | Select multiple elements |
+| `forEach()` | Loop through elements |
+| `classList.contains()` | Check class |
+| `style.display` | Show/hide |
+| `? :` | Ternary operator |
+| `||` | OR |
+| `===` | Strict equality |
+| `return` | Stop function |
+
+---
+
+# 💡 Don't Memorize the Code
+
+Remember this:
+
+```text
+READ
+ ↓
+VALIDATE
+ ↓
+DECIDE
+ ↓
+CREATE
+ ↓
+APPEND
+ ↓
+CLEAR
+```
+
+And for filtering:
+
+```text
+SELECT
+ ↓
+LOOP
+ ↓
+CHECK
+ ↓
+SHOW / HIDE
+```
+
+Once you understand these two flows, you can solve many similar JavaScript DOM questions without memorizing the exact code.
+
+---
+
 <p align="center">
-```
-`<b>`{=html}💡 Don't memorize the code. Understand the flow: Read →
-Validate → Decide → Create → Add → Filter.`</b>`{=html}
-```{=html}
+  <b>🚀 Practice Goal</b>
 </p>
-```
-```{=html}
+
 <p align="center">
-```
-⭐ `<i>`{=html}Practice it once without looking at the
-solution.`</i>`{=html} ⭐
-```{=html}
+  <b>Try rebuilding this project from scratch without looking at the solution.</b>
 </p>
-```
+
+<p align="center">
+  READ → VALIDATE → DECIDE → CREATE → APPEND → FILTER
+</p>
+
+---
+
+<p align="center">
+  ⭐ <i>Built for JavaScript DOM practice and placement preparation.</i> ⭐
+</p>

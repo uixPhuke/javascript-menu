@@ -1,77 +1,101 @@
 # 🛒 Interactive Shopping Cart
 
-```{=html}
 <p align="center">
-```
-`<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=36BCF7&center=true&vCenter=true&width=700&lines=Interactive+Shopping+Cart;JavaScript+DOM+Practice;Quantity+%7C+Subtotal+%7C+Discount+%7C+Total" alt="Typing animation" />`{=html}
-```{=html}
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=36BCF7&center=true&vCenter=true&width=750&lines=Interactive+Shopping+Cart;JavaScript+DOM+Practice;Quantity+%7C+Subtotal+%7C+Discount+%7C+Total" alt="Typing Animation">
 </p>
-```
-```{=html}
-<p align="center">
-```
-`<b>`{=html}🚀 A JavaScript DOM practice project focused on cart
-calculations and dynamic UI updates.`</b>`{=html}
-```{=html}
-</p>
-```
-```{=html}
-<p align="center">
-```
-`<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">`{=html}
-`<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">`{=html}
-`<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">`{=html}
-```{=html}
-</p>
-```
 
-------------------------------------------------------------------------
+<p align="center">
+  <b>🚀 A JavaScript DOM practice project focused on cart calculations and dynamic UI updates.</b>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/DOM-Manipulation-36BCF7?style=flat-square" alt="DOM">
+  <img src="https://img.shields.io/badge/Level-Beginner%20%7C%20Intermediate-success?style=flat-square" alt="Level">
+  <img src="https://img.shields.io/badge/Purpose-Placement%20Prep-orange?style=flat-square" alt="Placement Prep">
+</p>
+
+---
 
 ## 📌 Project Overview
 
-This project implements a simple **interactive shopping cart** using
-HTML, CSS, and JavaScript.
+This project implements a simple **interactive shopping cart** using HTML, CSS, and JavaScript.
 
-The user can increase or decrease the quantity of products. Whenever the
-quantity changes:
+The user can increase or decrease the quantity of products.
 
--   🔢 The quantity is updated
--   💰 The product subtotal is recalculated
--   🧮 The complete cart total is recalculated
--   🎁 A 10% discount is applied when the total is greater than `100`
--   🏷️ A discount badge is shown or hidden automatically
+Whenever the quantity changes:
 
-The main goal is to practice **JavaScript DOM manipulation, event-driven
-logic, loops, calculations, and dynamic UI updates**.
+```text
+Quantity
+   ↓
+Product Subtotal
+   ↓
+Cart Total
+   ↓
+Discount Check
+   ↓
+Final Total
+```
 
-------------------------------------------------------------------------
+The main goal is to practice:
 
-# 🎯 What You Will Learn
+- JavaScript DOM manipulation
+- DOM traversal
+- Event-driven logic
+- Number conversion
+- Arithmetic operations
+- Loops
+- Conditional statements
+- Dynamic UI updates
 
-  JavaScript Concept     Purpose
-  ---------------------- ----------------------------------------------------
-  `function`             Create reusable logic
-  Function parameters    Receive the clicked button and quantity change
-  `closest()`            Find the product row containing the clicked button
-  `querySelector()`      Find elements inside a specific row
-  `querySelectorAll()`   Find all product rows
-  `.innerText`           Read/update visible text
-  `dataset`              Read HTML `data-*` attributes
-  `parseInt()`           Convert text to an integer
-  `parseFloat()`         Convert text to a decimal number
-  `Math.max()`           Prevent quantity from becoming negative
-  `forEach()`            Loop through all cart rows
-  `+=`                   Add to a running total
-  `*=`                   Apply a multiplication operation
-  `if / else`            Apply conditional discount logic
-  `.style.display`       Show/hide the discount badge
-  `toFixed(2)`           Format currency to two decimal places
+---
 
-------------------------------------------------------------------------
+## ✨ Features
 
-# 📁 Project Structure
+| Feature | Description |
+|---|---|
+| ➕ Increase Quantity | Adds one item |
+| ➖ Decrease Quantity | Removes one item |
+| 🛑 Minimum Quantity | Prevents negative quantities |
+| 💰 Subtotal | Calculates price × quantity |
+| 🧮 Cart Total | Calculates all product totals |
+| 🎁 Discount | Applies 10% discount above $100 |
+| 🏷️ Discount Badge | Automatically shows/hides |
+| ⚡ Dynamic UI | Updates without refreshing |
 
-``` text
+---
+
+## 🎯 Learning Objectives
+
+| JavaScript Concept | Purpose |
+|---|---|
+| `function` | Create reusable logic |
+| Function parameters | Pass clicked button and quantity change |
+| `closest()` | Find the product row |
+| `querySelector()` | Find an element inside a row |
+| `querySelectorAll()` | Find multiple elements |
+| `.innerText` | Read/update visible text |
+| `.dataset` | Read `data-*` attributes |
+| `parseInt()` | Convert text to integer |
+| `parseFloat()` | Convert text to decimal |
+| `Math.max()` | Prevent negative quantity |
+| `forEach()` | Loop through cart rows |
+| `+=` | Add to running total |
+| `*=` | Apply multiplication |
+| `if / else` | Apply conditions |
+| `.style.display` | Show/hide elements |
+| `toFixed(2)` | Format currency |
+
+---
+
+## 📁 Project Structure
+
+```text
 shopping-cart/
 │
 ├── index.html
@@ -80,71 +104,74 @@ shopping-cart/
 └── README.md
 ```
 
-### File responsibilities
+### File Responsibilities
 
-``` text
+```text
 index.html
-    ↓
-Cart structure
+     ↓
+Cart Structure
 
 style.css
-    ↓
-Cart appearance
+     ↓
+Cart Appearance
 
 app.js
-    ↓
-Quantity + subtotal + total logic
+     ↓
+Quantity + Subtotal + Total Logic
 
 README.md
-    ↓
-Project documentation
+     ↓
+Project Documentation
 ```
 
-------------------------------------------------------------------------
+---
 
 # 🧠 JavaScript Architecture
 
 The JavaScript contains two important functions:
 
-``` js
+```js
 adjustQty(btn, delta)
 recalculateTotal()
 ```
 
 They work together:
 
-``` text
+```text
 User clicks + / -
-       ↓
+        ↓
    adjustQty()
-       ↓
+        ↓
 Change quantity
-       ↓
-Calculate row subtotal
-       ↓
+        ↓
+Calculate subtotal
+        ↓
 recalculateTotal()
-       ↓
+        ↓
 Calculate entire cart
-       ↓
+        ↓
 Apply discount if required
-       ↓
+        ↓
 Update total on screen
 ```
 
-------------------------------------------------------------------------
+---
 
 # 1️⃣ `adjustQty(btn, delta)`
 
-``` js
+```js
 function adjustQty(btn, delta) {
+
+    // logic
+
+}
 ```
 
-This function is responsible for changing the quantity of **one
-particular product**.
+This function changes the quantity of **one particular product**.
 
 It receives two parameters:
 
-``` text
+```text
 btn
 delta
 ```
@@ -153,31 +180,35 @@ delta
 
 `btn` represents the button the user clicked.
 
-For example:
+Example:
 
-``` html
+```html
 <button onclick="adjustQty(this, 1)">+</button>
 ```
 
 Here:
 
-``` text
-this → clicked button
+```text
+this
+ ↓
+clicked button
+ ↓
+btn
 ```
 
 ### `delta`
 
 `delta` tells JavaScript how much the quantity should change.
 
-``` text
+```text
 + button → delta = 1
 - button → delta = -1
 ```
 
 So:
 
-``` text
-adjustQty(button, 1)
+```js
+adjustQty(button, 1);
 ```
 
 means:
@@ -186,19 +217,19 @@ means:
 
 And:
 
-``` text
-adjustQty(button, -1)
+```js
+adjustQty(button, -1);
 ```
 
 means:
 
 > Decrease quantity by 1.
 
-------------------------------------------------------------------------
+---
 
 # 2️⃣ Find the Product Row
 
-``` js
+```js
 const row = btn.closest('tr');
 ```
 
@@ -206,9 +237,10 @@ This is an important DOM technique.
 
 Suppose:
 
-``` html
+```html
 <tr>
     <td>Phone</td>
+
     <td>
         <button>+</button>
     </td>
@@ -217,94 +249,93 @@ Suppose:
 
 When the button is clicked:
 
-``` js
-btn.closest('tr')
+```js
+btn.closest('tr');
 ```
 
 means:
 
-> Starting from the clicked button, move upward until the nearest `<tr>`
-> is found.
+> Starting from the clicked button, move upward until the nearest `<tr>` is found.
 
-### Think of it like this:
+Think:
 
-``` text
+```text
 button
    ↑
   td
    ↑
-  tr  ← closest('tr')
+  tr ← closest('tr')
 ```
 
 Therefore:
 
-``` js
+```js
 const row = btn.closest('tr');
 ```
 
-gives us the **product row associated with the clicked button**.
+gives us the product row associated with the clicked button.
 
-------------------------------------------------------------------------
+---
 
 # 3️⃣ Find the Quantity Element
 
-``` js
+```js
 const qtySpan = row.querySelector('.qty');
 ```
 
 Now that we know the correct row, we search **inside that row**.
 
-Suppose:
+Example:
 
-``` html
+```html
 <span class="qty">2</span>
 ```
 
 Then:
 
-``` js
-row.querySelector('.qty')
+```js
+row.querySelector('.qty');
 ```
 
 finds that element.
 
 ### Why search inside `row`?
 
-Imagine there are 5 products.
+Imagine there are five products.
 
-If we used:
+If we use:
 
-``` js
-document.querySelector('.qty')
+```js
+document.querySelector('.qty');
 ```
 
 we could accidentally get the first quantity in the entire document.
 
 But:
 
-``` js
-row.querySelector('.qty')
+```js
+row.querySelector('.qty');
 ```
 
 means:
 
 > Find the `.qty` belonging to THIS product.
 
-This pattern is very useful:
+Useful pattern:
 
-``` text
-clicked button
+```text
+Clicked button
       ↓
 closest row
       ↓
 find element inside row
 ```
 
-------------------------------------------------------------------------
+---
 
 # 4️⃣ Calculate the New Quantity
 
-``` js
+```js
 let qty = Math.max(
     0,
     parseInt(qtySpan.innerText) + delta
@@ -313,79 +344,69 @@ let qty = Math.max(
 
 This line contains three concepts.
 
-------------------------------------------------------------------------
+### `qtySpan.innerText`
 
-## `qtySpan.innerText`
+If:
 
-Suppose:
-
-``` html
+```html
 <span class="qty">2</span>
 ```
 
-Then:
+then:
 
-``` js
+```js
 qtySpan.innerText
 ```
 
 returns:
 
-``` text
+```text
 "2"
 ```
 
 It is text.
 
-------------------------------------------------------------------------
+### `parseInt()`
 
-## `parseInt()`
-
-``` js
-parseInt("2")
+```js
+parseInt("2");
 ```
 
 converts:
 
-``` text
+```text
 "2"
-```
-
-into:
-
-``` text
+ ↓
 2
 ```
 
 Now arithmetic can be performed.
 
-------------------------------------------------------------------------
+### Add `delta`
 
-## Add `delta`
+If:
 
-Suppose:
-
-``` text
+```text
 current quantity = 2
 delta = 1
 ```
 
-Then:
+then:
 
-``` text
+```text
 2 + 1 = 3
 ```
 
 For the minus button:
 
-``` text
+```text
 current quantity = 2
 delta = -1
 
 2 + (-1) = 1
 ```
 
-------------------------------------------------------------------------
+---
 
 # 5️⃣ Why `Math.max(0, ...)`?
 
@@ -393,7 +414,7 @@ This prevents the quantity from becoming negative.
 
 Without `Math.max()`:
 
-``` text
+```text
 quantity = 0
 delta = -1
 
@@ -402,84 +423,84 @@ delta = -1
 
 A shopping cart should not normally have:
 
-``` text
+```text
 Quantity = -1
 ```
 
 So:
 
-``` js
-Math.max(0, -1)
+```js
+Math.max(0, -1);
 ```
 
 returns:
 
-``` text
+```text
 0
 ```
 
-### Therefore:
+Therefore:
 
-``` js
-Math.max(0, newQuantity)
+```js
+Math.max(0, newQuantity);
 ```
 
 means:
 
 > Never allow the quantity to go below zero.
 
-------------------------------------------------------------------------
+---
 
 # 6️⃣ Update Quantity on Screen
 
-``` js
+```js
 qtySpan.innerText = qty;
 ```
 
 Suppose:
 
-``` text
+```text
 old quantity = 2
 new quantity = 3
 ```
 
 This changes:
 
-``` html
+```html
 <span class="qty">2</span>
 ```
 
 into:
 
-``` html
+```html
 <span class="qty">3</span>
 ```
 
-The webpage is updated immediately.
+The webpage updates immediately.
 
-------------------------------------------------------------------------
+---
 
 # 7️⃣ Get Product Price
 
-``` js
+```js
 const price = parseFloat(row.dataset.price);
 ```
 
 Suppose the row contains:
 
-``` html
+```html
 <tr data-price="49.99">
 ```
 
 Then:
 
-``` js
+```js
 row.dataset.price
 ```
 
 returns:
 
-``` text
+```text
 "49.99"
 ```
 
@@ -487,107 +508,95 @@ It is a string.
 
 So:
 
-``` js
-parseFloat("49.99")
+```js
+parseFloat("49.99");
 ```
 
 becomes:
 
-``` text
+```text
 49.99
 ```
 
-------------------------------------------------------------------------
+---
 
 # 🧩 Understanding `dataset`
 
 HTML:
 
-``` html
+```html
 data-price="49.99"
 ```
 
 JavaScript:
 
-``` js
+```js
 row.dataset.price
 ```
 
-The general rule is:
+General rule:
 
-``` text
-HTML                 JavaScript
-
-data-price="50"  →   element.dataset.price
-
-data-name="Phone" →  element.dataset.name
-```
+| HTML | JavaScript |
+|---|---|
+| `data-price="50"` | `element.dataset.price` |
+| `data-name="Phone"` | `element.dataset.name` |
+| `data-id="101"` | `element.dataset.id` |
 
 This is how custom `data-*` attributes can store information in HTML.
 
-------------------------------------------------------------------------
+---
 
 # 8️⃣ Calculate the Subtotal
 
-``` js
+```js
 row.querySelector('.subtotal').innerText =
     `$${(price * qty).toFixed(2)}`;
 ```
 
 Suppose:
 
-``` text
+```text
 price = 49.99
 qty = 3
 ```
 
 Then:
 
-``` text
+```text
 49.99 × 3 = 149.97
 ```
 
-------------------------------------------------------------------------
+Final display:
 
-## `toFixed(2)`
+```text
+$149.97
+```
 
-``` js
-149.97.toFixed(2)
+### `toFixed(2)`
+
+```js
+149.97.toFixed(2);
 ```
 
 keeps two decimal places.
 
 Example:
 
-``` js
-100.toFixed(2)
+```js
+100.toFixed(2);
 ```
 
 produces:
 
-``` text
+```text
 "100.00"
 ```
 
-Then:
-
-``` js
-`$${...}`
-```
-
-adds the `$`.
-
-Final result:
-
-``` text
-$149.97
-```
-
-------------------------------------------------------------------------
+---
 
 # 9️⃣ Recalculate the Whole Cart
 
-``` js
+```js
 recalculateTotal();
 ```
 
@@ -595,7 +604,7 @@ Changing one product also changes the **entire cart total**.
 
 So after updating the individual subtotal, we call another function.
 
-``` text
+```text
 adjustQty()
      ↓
 update one product
@@ -605,54 +614,57 @@ recalculateTotal()
 calculate everything
 ```
 
-------------------------------------------------------------------------
+---
 
 # 🔟 `recalculateTotal()`
 
-``` js
+```js
 function recalculateTotal() {
+
+    let total = 0;
+
+}
 ```
 
-This function calculates the total price of **all products in the
-cart**.
+This function calculates the total price of **all products in the cart**.
 
-------------------------------------------------------------------------
+---
 
 # 1️⃣1️⃣ Start Total at Zero
 
-``` js
+```js
 let total = 0;
 ```
 
 We use `total` as an accumulator.
 
-``` text
+```text
 total = 0
 ```
 
 Then each product adds its subtotal.
 
-------------------------------------------------------------------------
+---
 
 # 1️⃣2️⃣ Select Every Cart Row
 
-``` js
+```js
 document.querySelectorAll('#cartBody tr')
 ```
 
 Suppose the table contains:
 
-``` text
-<tr>Phone</tr>
-<tr>Laptop</tr>
-<tr>Mouse</tr>
+```text
+Phone
+Laptop
+Mouse
 ```
 
-This selector finds all of them.
+This selector finds all rows.
 
 The selector:
 
-``` text
+```text
 #cartBody tr
 ```
 
@@ -660,19 +672,17 @@ means:
 
 > Find every `<tr>` inside the element whose ID is `cartBody`.
 
-------------------------------------------------------------------------
+---
 
 # 1️⃣3️⃣ Loop Through Every Row
 
-``` js
+```js
 .forEach(r => {
 ```
 
 `forEach()` runs the code once for every row.
 
-Example:
-
-``` text
+```text
 Row 1 → execute
 Row 2 → execute
 Row 3 → execute
@@ -682,37 +692,37 @@ The variable `r` means the **current row**.
 
 You could also write:
 
-``` js
+```js
 .forEach(row => {
 ```
 
 which is often easier to understand.
 
-------------------------------------------------------------------------
+---
 
 # 1️⃣4️⃣ Get Price of Current Row
 
-``` js
+```js
 const price = parseFloat(r.dataset.price);
 ```
 
 For example:
 
-``` html
+```html
 <tr data-price="50">
 ```
 
 becomes:
 
-``` js
+```js
 price = 50;
 ```
 
-------------------------------------------------------------------------
+---
 
 # 1️⃣5️⃣ Get Quantity of Current Row
 
-``` js
+```js
 const qty = parseInt(
     r.querySelector('.qty').innerText
 );
@@ -720,7 +730,7 @@ const qty = parseInt(
 
 The process is:
 
-``` text
+```text
 r
  ↓
 find .qty
@@ -734,13 +744,13 @@ number
 
 Example:
 
-``` text
+```html
 <span class="qty">3</span>
 ```
 
 becomes:
 
-``` text
+```text
 "3"
  ↓
 parseInt()
@@ -748,31 +758,31 @@ parseInt()
 3
 ```
 
-------------------------------------------------------------------------
+---
 
 # 1️⃣6️⃣ Add Product Total
 
-``` js
+```js
 total += price * qty;
 ```
 
 This is shorthand for:
 
-``` js
+```js
 total = total + (price * qty);
 ```
 
-Suppose the cart contains:
+Suppose:
 
-  Product      Price   Quantity   Subtotal
-  ---------- ------- ---------- ----------
-  Phone           50          2        100
-  Mouse           20          3         60
-  Keyboard        40          1         40
+| Product | Price | Quantity | Subtotal |
+|---|---:|---:|---:|
+| Phone | 50 | 2 | 100 |
+| Mouse | 20 | 3 | 60 |
+| Keyboard | 40 | 1 | 40 |
 
 The loop calculates:
 
-``` text
+```text
 Initial:
 total = 0
 
@@ -786,36 +796,36 @@ total = 100 + 60
 
 Keyboard:
 total = 160 + 40
-        = 200
+      = 200
 ```
 
 Final:
 
-``` text
+```text
 total = 200
 ```
 
-------------------------------------------------------------------------
+---
 
 # 1️⃣7️⃣ Find the Discount Badge
 
-``` js
+```js
 const badge = document.getElementById('cartBadge');
 ```
 
 This finds the HTML element used to display the discount message.
 
-For example:
+Example:
 
-``` html
+```html
 <span id="cartBadge">10% OFF</span>
 ```
 
-------------------------------------------------------------------------
+---
 
 # 1️⃣8️⃣ Check Discount Condition
 
-``` js
+```js
 if (total > 100) {
 ```
 
@@ -823,57 +833,49 @@ This asks:
 
 > Is the cart total greater than 100?
 
-### Example
+Example:
 
-``` text
+```text
 total = 150
-```
 
-Then:
-
-``` text
 150 > 100
 ```
 
-is:
+Result:
 
-``` text
+```text
 true
 ```
 
 The discount is applied.
 
-------------------------------------------------------------------------
+---
 
 # 1️⃣9️⃣ Apply 10% Discount
 
-``` js
+```js
 total *= 0.9;
 ```
 
 This is shorthand for:
 
-``` js
+```js
 total = total * 0.9;
 ```
 
 Why `0.9`?
 
-Because:
-
-``` text
-100% - 10% = 90%
+```text
+100% - 10%
+     ↓
+90%
+     ↓
+0.90
 ```
 
-And:
+Example:
 
-``` text
-90% = 0.90
-```
-
-So:
-
-``` text
+```text
 Original total = 200
 
 200 × 0.9 = 180
@@ -881,33 +883,25 @@ Original total = 200
 
 Final total:
 
-``` text
+```text
 180
 ```
 
-------------------------------------------------------------------------
+---
 
 # 2️⃣0️⃣ Show the Discount Badge
 
-``` js
+```js
 badge.style.display = 'inline-block';
 ```
 
 This makes the badge visible.
 
-For example:
-
-``` text
-10% OFF
-```
-
-can now appear on the page.
-
-------------------------------------------------------------------------
+---
 
 # 2️⃣1️⃣ If Total Is 100 or Less
 
-``` js
+```js
 else {
     badge.style.display = 'none';
 }
@@ -915,13 +909,13 @@ else {
 
 If:
 
-``` text
+```text
 total = 80
 ```
 
 then:
 
-``` text
+```text
 80 > 100
 ```
 
@@ -929,44 +923,40 @@ is false.
 
 So the badge is hidden.
 
-``` js
-badge.style.display = 'none';
-```
-
-------------------------------------------------------------------------
+---
 
 # 2️⃣2️⃣ Display the Final Total
 
-``` js
+```js
 document.getElementById('cartTotal').innerText =
     total.toFixed(2);
 ```
 
 Suppose:
 
-``` text
+```text
 total = 180
 ```
 
 Then:
 
-``` js
-total.toFixed(2)
+```js
+total.toFixed(2);
 ```
 
 produces:
 
-``` text
+```text
 "180.00"
 ```
 
-The value is then displayed in the cart total element.
+The value is displayed in the cart total element.
 
-------------------------------------------------------------------------
+---
 
 # 🔥 Complete Flow
 
-``` text
+```text
                   USER CLICKS + / -
                           ↓
                     adjustQty()
@@ -1007,17 +997,18 @@ The value is then displayed in the cart total element.
                    ↓            ↓
              Show badge       Hide badge
                     \          /
-                     ↓        ↓
-                   Display total
+                     \        /
+                      ↓      ↓
+                    Display total
 ```
 
-------------------------------------------------------------------------
+---
 
 # 🧪 Example Walkthrough
 
 Suppose the cart contains:
 
-``` text
+```text
 Phone
 Price = $60
 Quantity = 2
@@ -1029,121 +1020,107 @@ Quantity = 1
 
 ### Phone
 
-``` text
+```text
 60 × 2 = 120
 ```
 
 ### Mouse
 
-``` text
+```text
 30 × 1 = 30
 ```
 
-### Cart total
+### Cart Total
 
-``` text
+```text
 120 + 30 = 150
 ```
 
 Since:
 
-``` text
+```text
 150 > 100
 ```
 
 10% discount applies:
 
-``` text
+```text
 150 × 0.9 = 135
 ```
 
 Final:
 
-``` text
+```text
 $135.00
 ```
 
-------------------------------------------------------------------------
+---
 
 # 🧠 Important Concepts to Master
 
 ## `closest()`
 
-``` js
-btn.closest('tr')
+```js
+btn.closest('tr');
 ```
 
 > Find the nearest parent `<tr>`.
 
-------------------------------------------------------------------------
-
 ## `querySelector()`
 
-``` js
-row.querySelector('.qty')
+```js
+row.querySelector('.qty');
 ```
 
 > Find one matching element inside `row`.
 
-------------------------------------------------------------------------
-
 ## `querySelectorAll()`
 
-``` js
-document.querySelectorAll('#cartBody tr')
+```js
+document.querySelectorAll('#cartBody tr');
 ```
 
 > Find all matching elements.
 
-------------------------------------------------------------------------
-
 ## `dataset`
 
-``` js
-row.dataset.price
+```js
+row.dataset.price;
 ```
 
 > Read `data-price`.
 
-------------------------------------------------------------------------
-
 ## `parseInt()`
 
-``` js
-parseInt("5")
+```js
+parseInt("5");
 ```
 
 → `5`
 
 Used for integers.
 
-------------------------------------------------------------------------
-
 ## `parseFloat()`
 
-``` js
-parseFloat("49.99")
+```js
+parseFloat("49.99");
 ```
 
 → `49.99`
 
 Used for decimal numbers.
 
-------------------------------------------------------------------------
-
 ## `Math.max()`
 
-``` js
-Math.max(0, quantity)
+```js
+Math.max(0, quantity);
 ```
 
 > Prevent quantity from going below zero.
 
-------------------------------------------------------------------------
-
 ## `forEach()`
 
-``` js
+```js
 rows.forEach(row => {
     // logic
 });
@@ -1151,51 +1128,45 @@ rows.forEach(row => {
 
 > Run code for every row.
 
-------------------------------------------------------------------------
-
 ## `+=`
 
-``` js
+```js
 total += value;
 ```
 
-same as:
+Same as:
 
-``` js
+```js
 total = total + value;
 ```
 
-------------------------------------------------------------------------
-
 ## `*=`
 
-``` js
+```js
 total *= 0.9;
 ```
 
-same as:
+Same as:
 
-``` js
+```js
 total = total * 0.9;
 ```
 
-------------------------------------------------------------------------
-
 ## `toFixed(2)`
 
-``` js
-price.toFixed(2)
+```js
+price.toFixed(2);
 ```
 
 > Format the number to two decimal places.
 
-------------------------------------------------------------------------
+---
 
 # 🎯 What This Coding Question Tests
 
-This one question combines several frontend coding skills:
+This question combines several frontend coding skills:
 
-``` text
+```text
 DOM Traversal
       +
 DOM Selection
@@ -1206,7 +1177,7 @@ Number Conversion
       +
 Arithmetic
       +
-Validation of boundaries
+Boundary Handling
       +
 Loops
       +
@@ -1214,16 +1185,16 @@ Conditional Logic
       +
 Dynamic UI Updates
       +
-CSS manipulation
+CSS Manipulation
 ```
 
-------------------------------------------------------------------------
+---
 
 # ⭐ Most Important Pattern
 
 Remember this pattern for similar coding questions:
 
-``` js
+```js
 const row = btn.closest('tr');
 
 const value = row.querySelector('.something');
@@ -1231,7 +1202,7 @@ const value = row.querySelector('.something');
 
 It means:
 
-``` text
+```text
 Find the element I interacted with
               ↓
 Find its relevant parent/container
@@ -1239,57 +1210,177 @@ Find its relevant parent/container
 Find something inside that container
 ```
 
-This pattern is extremely useful for **cart, product list, todo list,
-table, and dynamic form questions**.
+This pattern is extremely useful for:
 
-------------------------------------------------------------------------
+- 🛒 Cart questions
+- 📋 Tables
+- ✅ Todo lists
+- 🛍️ Product lists
+- 📝 Dynamic forms
 
-# 🚀 Quick Revision
+---
 
-``` text
+# 🚀 Accenture Coding Round Pattern
+
+For an Accenture-style frontend question, recognize this structure:
+
+```text
+USER ACTION
+    ↓
+DOM EVENT
+    ↓
+SELECT ELEMENT
+    ↓
+READ VALUE
+    ↓
+CONVERT VALUE
+    ↓
+PROCESS / CALCULATE
+    ↓
+UPDATE DOM
+```
+
+For this project:
+
+```text
+Click +
+  ↓
 adjustQty()
-│
-├── closest()
-├── querySelector()
-├── innerText
-├── parseInt()
-├── Math.max()
-├── dataset
-├── parseFloat()
-├── toFixed()
-└── recalculateTotal()
-        │
-        ├── querySelectorAll()
-        ├── forEach()
-        ├── price × quantity
-        ├── if / else
-        ├── *= 0.9
-        ├── style.display
-        └── toFixed(2)
+  ↓
+closest('tr')
+  ↓
+querySelector('.qty')
+  ↓
+parseInt()
+  ↓
+quantity + 1
+  ↓
+Update innerText
+  ↓
+Calculate subtotal
+  ↓
+Recalculate cart
+  ↓
+Apply discount
+  ↓
+Update total
 ```
 
-------------------------------------------------------------------------
+---
 
-```{=html}
+# 📝 Quick Revision Cheat Sheet
+
+| Method / Operator | Remember |
+|---|---|
+| `closest()` | Find nearest parent |
+| `querySelector()` | Find one element |
+| `querySelectorAll()` | Find multiple elements |
+| `.innerText` | Read/update visible text |
+| `.dataset` | Read `data-*` |
+| `parseInt()` | Text → integer |
+| `parseFloat()` | Text → decimal |
+| `Math.max()` | Set minimum |
+| `forEach()` | Loop |
+| `+=` | Add |
+| `*=` | Multiply |
+| `if / else` | Condition |
+| `.style.display` | Show/hide |
+| `toFixed(2)` | 2 decimal places |
+
+---
+
+# 🏆 Final Takeaway
+
+Don't memorize the entire code.
+
+Remember the flow:
+
+```text
+CLICK
+  ↓
+FIND ROW
+  ↓
+READ QUANTITY
+  ↓
+CHANGE QUANTITY
+  ↓
+GET PRICE
+  ↓
+CALCULATE SUBTOTAL
+  ↓
+RECALCULATE TOTAL
+  ↓
+CHECK DISCOUNT
+  ↓
+UPDATE UI
+```
+
+The key idea is understanding how DOM operations work together:
+
+```js
+btn.closest('tr')
+```
+
+Find the correct product.
+
+```js
+row.querySelector('.qty')
+```
+
+Find data inside that product.
+
+```js
+parseInt(...)
+```
+
+Convert text into a number.
+
+```js
+price * qty
+```
+
+Perform calculation.
+
+```js
+element.innerText = ...
+```
+
+Update the webpage.
+
+```js
+querySelectorAll(...)
+```
+
+Find all products.
+
+```js
+forEach(...)
+```
+
+Process every product.
+
+```js
+if (...)
+```
+
+Apply business logic.
+
+---
+
 <p align="center">
-```
-`<b>`{=html}💡 Don't memorize the code. Remember the flow:`</b>`{=html}
-```{=html}
+  <b>💡 Don't memorize the code. Remember the flow.</b>
 </p>
-```
-```{=html}
+
 <p align="center">
-```
-`<b>`{=html}Click → Find Row → Read → Calculate → Update → Recalculate
-Total`</b>`{=html}
-```{=html}
+  <b>Click → Find Row → Read → Calculate → Update → Recalculate Total</b>
 </p>
-```
-```{=html}
+
 <p align="center">
-```
-⭐ `<i>`{=html}Practice rebuilding this without looking at the
-solution.`</i>`{=html} ⭐
-```{=html}
+  ⭐ <i>Practice rebuilding this without looking at the solution.</i> ⭐
 </p>
-```
+
+---
+
+<p align="center">
+  <sub>Built for JavaScript DOM practice and placement preparation 🚀</sub>
+</p>
