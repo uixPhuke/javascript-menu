@@ -1,0 +1,23 @@
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 2px solid #334155;
+}
+
+input.weak {
+    border-color: #ef4444;
+}
+
+input.medium {
+    border-color: #f59e0b;
+}
+
+input.strong {
+    border-color: #22c55e;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
