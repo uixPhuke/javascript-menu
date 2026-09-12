@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+input,
+select {
+    padding: 6px;
+    background: #334155;
+    color: white;
+    border: 1px solid #475569;
+}
+
+.pass {
+    color: #4ade80;
+    font-weight: bold;
+}
+
+.fail {
+    color: #f87171;
+    font-weight: bold;
+}

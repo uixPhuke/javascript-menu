@@ -1,0 +1,22 @@
+<html>
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <div class="form">
+  <input type="text" id="sName" placeholder="Student Name" />
+  <input type="number" id="sMarks" placeholder="Marks (0-100)" />
+  <button onclick="addStudent()">Add Student</button>
+</div>
+
+<select id="sFilter" onchange="filterStudents(this.value)">
+  <option value="all">All</option>
+  <option value="pass">Pass Only</option>
+  <option value="fail">Fail Only</option>
+</select>
+
+<table>
+  <thead><tr><th>Name</th><th>Marks</th><th>Status</th></tr></thead>
+  <tbody id="sBody"></tbody>
+</table>
+    </body>
+    <script src="app.js"></script>
+</html>

@@ -1,6 +1,6 @@
 function adjustQty(btn, delta) {
   const row = btn.closest('tr');
-  const qtySpan = row.querySelector('.qty');
+  const qtySpan = document.querySelector('.qty');
   let qty = Math.max(0, parseInt(qtySpan.innerText) + delta);
   qtySpan.innerText = qty;
 
