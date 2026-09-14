@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="q1" class="q-step">
+        <p>Q1: Is JS single-threaded?</p>
+        <label><input type="radio" name="q1" value="1"> Yes</label>
+    </div>
+    <div id="q2" class="q-step hidden">
+        <p>Q2: Does CSS mean Cascading Style Sheets?</p>
+        <label><input type="radio" name="q2" value="1"> Yes</label>
+    </div>
+
+    <div class="nav-btns">
+        <button id="qPrev" onclick="navStep(-1)" disabled>Prev</button>
+        <button id="qNext" onclick="navStep(1)">Next</button>
+    </div>
+    <h4 id="qScore" class="hidden"></h4>
+</body>
+<script src="app.js"></script>
+
+</html>

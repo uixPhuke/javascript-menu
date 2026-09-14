@@ -1,6 +1,28 @@
 table {
-     width: 100%; 
-     border-collapse: collapse; }
-th, td { border: 1px solid #334155; padding: 8px; text-align: left; }
-.btn { background: #0284c7; color: #fff; border: none; padding: 4px 8px; cursor: pointer; }
-.badge { background: #22c55e; color: #000; padding: 2px 6px; font-size: 0.75rem; border-radius: 4px; display: none; }
+     width: 100%;
+     border-collapse: collapse;
+}
+
+th,
+td {
+     border: 1px solid #334155;
+     padding: 8px;
+     text-align: left;
+}
+
+.btn {
+     background: #0284c7;
+     color: #fff;
+     border: none;
+     padding: 4px 8px;
+     cursor: pointer;
+}
+
+.badge {
+     background: #22c55e;
+     color: #000;
+     padding: 2px 6px;
+     font-size: 0.75rem;
+     border-radius: 4px;
+     display: none;
+}

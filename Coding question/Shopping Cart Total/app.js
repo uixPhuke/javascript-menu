@@ -6,6 +6,7 @@ function adjustQty(btn, delta) {
 
   const price = parseFloat(row.dataset.price);
   row.querySelector('.subtotal').innerText = `$${(price * qty).toFixed(2)}`;
+  console.log(`Shlock pay : ${(price * qty).toFixed(2)}`)
 
   recalculateTotal();
 }
