@@ -1,0 +1,27 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>    
+<body>
+    <input type="text" id="pSearch" placeholder="Search product..." oninput="filterGrid()" />
+
+<div class="categories" onchange="filterGrid()">
+  <label><input type="radio" name="pCat" value="all" checked> All</label>
+  <label><input type="radio" name="pCat" value="tech"> Tech</label>
+  <label><input type="radio" name="pCat" value="book"> Books</label>
+</div>
+
+<div class="grid">
+  <div class="pCard" data-cat="tech">Laptop</div>
+  <div class="pCard" data-cat="book">JS Handbook</div>
+</div>
+
+</body>
+<script src="app.js"></script>
+</html>
+
+
+
+
+
