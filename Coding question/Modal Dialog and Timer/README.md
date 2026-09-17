@@ -1,20 +1,150 @@
-# 🔥 JavaScript Modal --- DOM & Event Handling Master Guide
+# 🔥 JavaScript Modal --- DOM & Event Handling Practice
 
-> A beginner-friendly, interview-ready guide to understanding a **modal
-> popup** using HTML, CSS, and JavaScript.
+```{=html}
+<p align="center">
+```
+`<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=36BCF7&center=true&vCenter=true&width=850&lines=JavaScript+Modal+Practice;DOM+Manipulation;Events+%7C+classList+%7C+setTimeout;Accenture+Placement+Prep" alt="Typing Animation">`{=html}
 
-::: {align="center"}
-### 🎯 What you will learn
+```{=html}
+</p>
+```
+```{=html}
+<p align="center">
+```
+`<b>`{=html}🚀 A JavaScript DOM practice project focused on modal UI,
+click events, CSS classes, event targets, and delayed
+actions.`</b>`{=html}
 
-`onclick` · `event` · `event.target` · `getElementById()` · `classList`
-· `toggle()` · `!show` · `setTimeout()` · CSS Overlay · Event Flow
-:::
+```{=html}
+</p>
+```
+```{=html}
+<p align="center">
+```
+`<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">`{=html}
+`<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">`{=html}
+`<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">`{=html}
+
+```{=html}
+</p>
+```
+```{=html}
+<p align="center">
+```
+`<img src="https://img.shields.io/badge/DOM-Manipulation-36BCF7?style=flat-square" alt="DOM">`{=html}
+`<img src="https://img.shields.io/badge/Level-Beginner%20%7C%20Intermediate-success?style=flat-square" alt="Level">`{=html}
+`<img src="https://img.shields.io/badge/Purpose-Placement%20Prep-orange?style=flat-square" alt="Placement Prep">`{=html}
+
+```{=html}
+</p>
+```
 
 ------------------------------------------------------------------------
 
-## 🧩 1. Complete Project
+## 📌 Project Overview
 
-### `index.html`
+This project implements a **simple interactive promotional modal** using
+HTML, CSS, and JavaScript.
+
+The modal can:
+
+-   Open when the user clicks a button
+-   Close using the Close button
+-   Close when the user clicks the backdrop
+-   Automatically open after 4 seconds
+
+The main goal is to understand how JavaScript controls the DOM and
+changes the UI dynamically.
+
+### Core flow
+
+``` text
+User Action
+    ↓
+onclick Event
+    ↓
+JavaScript Function
+    ↓
+Find DOM Element
+    ↓
+Change CSS Class
+    ↓
+Browser Updates UI
+```
+
+------------------------------------------------------------------------
+
+## ✨ Features
+
+  Feature               Description
+  --------------------- -------------------------------------------------
+  🔓 Open Modal         Opens the promotional popup
+  ❌ Close Modal        Hides the popup
+  🖱️ Backdrop Click     Clicking outside the popup closes it
+  ⏱️ Auto Open          Opens automatically after 4 seconds
+  🎨 CSS Overlay        Covers the screen with a dark transparent layer
+  ⚡ Dynamic UI         Changes without refreshing the page
+  🧩 DOM Manipulation   JavaScript controls HTML classes
+  🧠 Event Handling     Uses click event information
+
+------------------------------------------------------------------------
+
+## 🎯 Learning Objectives
+
+  JavaScript / Web Concept   Purpose
+  -------------------------- ----------------------------------------------
+  `onclick`                  Run JavaScript when an element is clicked
+  `event`                    Get information about the click
+  `event.target`             Find the exact element that was clicked
+  `getElementById()`         Find an HTML element by ID
+  `classList`                Access an element's CSS classes
+  `classList.toggle()`       Add/remove a CSS class
+  `!`                        Logical NOT operator
+  `true / false`             Control show/hide state
+  `setTimeout()`             Run code after a delay
+  `display: none`            Hide an element
+  `position: fixed`          Position an element relative to the viewport
+  `inset: 0`                 Stretch an element across the viewport
+  `place-items: center`      Center content using CSS Grid
+
+------------------------------------------------------------------------
+
+## 📁 Project Structure
+
+``` text
+javascript-modal/
+│
+├── index.html
+├── style.css
+├── app.js
+└── README.md
+```
+
+### File Responsibilities
+
+``` text
+index.html
+    ↓
+Modal Structure
+
+style.css
+    ↓
+Modal Appearance + Hidden State
+
+app.js
+    ↓
+Open + Close + Backdrop + Timer Logic
+
+README.md
+    ↓
+Project Documentation
+```
+
+------------------------------------------------------------------------
+
+# 🧩 Complete Project Code
+
+## 1️⃣ `index.html`
 
 ``` html
 <!DOCTYPE html>
@@ -49,33 +179,9 @@
 </html>
 ```
 
-### `app.js`
+------------------------------------------------------------------------
 
-``` javascript
-function toggleModal(show) {
-
-    document
-        .getElementById("demoModal")
-        .classList
-        .toggle("hidden", !show);
-
-}
-
-function closeOnBackdrop(e) {
-
-    if (e.target.id === "demoModal") {
-        toggleModal(false);
-    }
-
-}
-
-// Automatically open after 4 seconds
-setTimeout(() => {
-    toggleModal(true);
-}, 4000);
-```
-
-### `style.css`
+## 2️⃣ `style.css`
 
 ``` css
 .modal-overlay {
@@ -101,48 +207,573 @@ setTimeout(() => {
 
 ------------------------------------------------------------------------
 
-# 🧠 2. What Is a Modal?
+## 3️⃣ `app.js`
 
-A **modal** is a popup that appears on top of the current webpage.
+``` javascript
+function toggleModal(show) {
 
-Typical uses:
+    document
+        .getElementById("demoModal")
+        .classList
+        .toggle("hidden", !show);
 
--   🎁 Promotional offers
--   🔐 Login forms
--   ⚠️ Confirmation messages
--   🗑️ Delete confirmation
--   📋 Forms
--   ℹ️ Important information
+}
 
-Visual structure:
+function closeOnBackdrop(e) {
 
-``` text
-┌───────────────────────────────────────────┐
-│                                           │
-│             DARK OVERLAY                  │
-│                                           │
-│             ┌─────────────┐               │
-│             │   MODAL     │               │
-│             │             │               │
-│             │  Exclusive  │               │
-│             │    Offer    │               │
-│             │             │               │
-│             │    Close    │               │
-│             └─────────────┘               │
-│                                           │
-└───────────────────────────────────────────┘
+    if (e.target.id === "demoModal") {
+        toggleModal(false);
+    }
+
+}
+
+// Automatically open after 4 seconds
+setTimeout(() => {
+    toggleModal(true);
+}, 4000);
 ```
-
-There are two important parts:
-
-  Part               Purpose
-  ------------------ -------------------------------------------
-  `.modal-overlay`   Covers the screen and positions the popup
-  `.modal-content`   Contains the actual popup content
 
 ------------------------------------------------------------------------
 
-# 🎨 3. `.modal-overlay` --- What Is It?
+# 🧠 JavaScript Architecture
+
+The JavaScript has two main functions:
+
+``` javascript
+toggleModal(show)
+
+closeOnBackdrop(e)
+```
+
+and one delayed action:
+
+``` javascript
+setTimeout(...)
+```
+
+They work together:
+
+``` text
+             PAGE LOAD
+                 │
+                 ▼
+          setTimeout()
+                 │
+            Wait 4 sec
+                 │
+                 ▼
+        toggleModal(true)
+                 │
+                 ▼
+            SHOW MODAL
+                 │
+        ┌────────┴────────┐
+        │                 │
+        ▼                 ▼
+   Close Button      Backdrop Click
+        │                 │
+        ▼                 ▼
+toggleModal(false)  closeOnBackdrop(e)
+        │                 │
+        │                 ▼
+        │          Check event.target
+        │                 │
+        │                 ▼
+        │          Is it demoModal?
+        │                 │
+        └────────┬────────┘
+                 ▼
+          HIDE MODAL
+```
+
+------------------------------------------------------------------------
+
+# 1️⃣ `toggleModal(show)`
+
+``` js
+function toggleModal(show) {
+
+    document
+        .getElementById("demoModal")
+        .classList
+        .toggle("hidden", !show);
+
+}
+```
+
+This function controls whether the modal is **visible or hidden**.
+
+It receives one parameter:
+
+``` text
+show
+```
+
+The value can be:
+
+``` text
+true
+false
+```
+
+------------------------------------------------------------------------
+
+## `show`
+
+When we write:
+
+``` html
+<button onclick="toggleModal(true)">
+```
+
+the function receives:
+
+``` text
+show = true
+```
+
+This means:
+
+> Show the modal.
+
+When we write:
+
+``` html
+<button onclick="toggleModal(false)">
+```
+
+the function receives:
+
+``` text
+show = false
+```
+
+This means:
+
+> Hide the modal.
+
+------------------------------------------------------------------------
+
+# 2️⃣ `document`
+
+``` js
+document
+```
+
+`document` represents the current HTML page.
+
+JavaScript uses it to access and modify elements in the webpage.
+
+Think:
+
+``` text
+Browser Page
+     ↓
+ document
+     ↓
+ HTML Elements
+```
+
+------------------------------------------------------------------------
+
+# 3️⃣ `getElementById()`
+
+``` js
+document.getElementById("demoModal")
+```
+
+This finds the HTML element with:
+
+``` html
+id="demoModal"
+```
+
+For example:
+
+``` html
+<div id="demoModal">
+```
+
+After this line, JavaScript has a reference to that `<div>`.
+
+### Mental model
+
+``` text
+document
+    ↓
+getElementById()
+    ↓
+"demoModal"
+    ↓
+HTML <div>
+```
+
+------------------------------------------------------------------------
+
+# 4️⃣ `classList`
+
+``` js
+element.classList
+```
+
+`classList` gives JavaScript access to the CSS classes attached to an
+element.
+
+For:
+
+``` html
+<div class="modal-overlay hidden">
+```
+
+the classes are:
+
+``` text
+modal-overlay
+hidden
+```
+
+JavaScript can add, remove, or toggle those classes.
+
+------------------------------------------------------------------------
+
+# 5️⃣ `classList.toggle()`
+
+``` js
+classList.toggle("hidden", !show);
+```
+
+This is the most important line.
+
+The second argument controls the action.
+
+``` text
+true
+  ↓
+ADD class
+
+false
+  ↓
+REMOVE class
+```
+
+So:
+
+``` js
+toggle("hidden", true)
+```
+
+means:
+
+> Add `hidden`.
+
+And:
+
+``` js
+toggle("hidden", false)
+```
+
+means:
+
+> Remove `hidden`.
+
+------------------------------------------------------------------------
+
+# 6️⃣ Why `!show`?
+
+The `!` operator means **NOT**.
+
+``` text
+!true  → false
+!false → true
+```
+
+This creates the desired relationship:
+
+``` text
+show = true
+    ↓
+!show = false
+    ↓
+remove "hidden"
+    ↓
+SHOW MODAL
+```
+
+and:
+
+``` text
+show = false
+    ↓
+!show = true
+    ↓
+add "hidden"
+    ↓
+HIDE MODAL
+```
+
+------------------------------------------------------------------------
+
+## 📊 `true / false` Table
+
+  Function Call             `show`   `!show` `hidden`   Result
+  ---------------------- --------- --------- ---------- ---------
+  `toggleModal(true)`       `true`   `false` Removed    👀 Show
+  `toggleModal(false)`     `false`    `true` Added      🙈 Hide
+
+### ⭐ Remember
+
+``` text
+true  → SHOW
+false → HIDE
+```
+
+------------------------------------------------------------------------
+
+# 🖱️ 7️⃣ What Is `onclick`?
+
+Example:
+
+``` html
+<button onclick="toggleModal(true)">
+```
+
+`onclick` means:
+
+> Run this JavaScript when the element is clicked.
+
+It is not limited to buttons.
+
+A `<div>` can also have `onclick`:
+
+``` html
+<div onclick="hello()">
+    Click me
+</div>
+```
+
+Other HTML elements can also respond to click events.
+
+------------------------------------------------------------------------
+
+# 🧱 8️⃣ Why Does a `<div>` Have `onclick`?
+
+Your overlay is:
+
+``` html
+<div
+    id="demoModal"
+    class="modal-overlay"
+    onclick="closeOnBackdrop(event)"
+>
+```
+
+This `<div>` covers the screen because:
+
+``` css
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+}
+```
+
+Therefore the user can click the dark background.
+
+Visual:
+
+``` text
+┌────────────────────────────────┐
+│                                │
+│       DARK BACKGROUND           │ ← clickable overlay
+│                                │
+│          ┌──────────┐          │
+│          │  MODAL   │          │
+│          │          │          │
+│          │  Close   │          │
+│          └──────────┘          │
+│                                │
+│       DARK BACKGROUND           │ ← clickable overlay
+│                                │
+└────────────────────────────────┘
+```
+
+------------------------------------------------------------------------
+
+# 9️⃣ `onclick="closeOnBackdrop(event)"`
+
+``` html
+onclick="closeOnBackdrop(event)"
+```
+
+means:
+
+> When the overlay is clicked, call `closeOnBackdrop()` and pass the
+> click event.
+
+The function receives that event:
+
+``` js
+function closeOnBackdrop(e) {
+```
+
+Here:
+
+``` text
+event → e
+```
+
+`e` is simply the variable containing information about the click.
+
+------------------------------------------------------------------------
+
+# 🔍 1️⃣0️⃣ What Is `event.target`?
+
+``` js
+e.target
+```
+
+means:
+
+> The exact HTML element that was clicked.
+
+Example:
+
+### Click background
+
+``` text
+e.target
+   ↓
+#demoModal
+```
+
+### Click popup content
+
+``` text
+e.target
+   ↓
+.modal-content
+```
+
+### Click Close button
+
+``` text
+e.target
+   ↓
+button
+```
+
+------------------------------------------------------------------------
+
+# 1️⃣1️⃣ `e.target.id`
+
+``` js
+e.target.id
+```
+
+gets the ID of the exact element that was clicked.
+
+If the background is clicked:
+
+``` html
+<div id="demoModal">
+```
+
+then:
+
+``` js
+e.target.id
+```
+
+is:
+
+``` text
+"demoModal"
+```
+
+------------------------------------------------------------------------
+
+# 1️⃣2️⃣ `closeOnBackdrop(e)`
+
+``` js
+function closeOnBackdrop(e) {
+
+    if (e.target.id === "demoModal") {
+        toggleModal(false);
+    }
+
+}
+```
+
+This function closes the modal **only when the backdrop itself is
+clicked**.
+
+The condition:
+
+``` js
+e.target.id === "demoModal"
+```
+
+asks:
+
+> Was the exact element clicked the modal overlay?
+
+If yes:
+
+``` js
+toggleModal(false);
+```
+
+The modal closes.
+
+If not:
+
+``` text
+Do nothing
+```
+
+------------------------------------------------------------------------
+
+# 🎯 Why Check the Target?
+
+We want:
+
+``` text
+CLICK OUTSIDE POPUP
+        ↓
+      CLOSE
+```
+
+but:
+
+``` text
+CLICK INSIDE POPUP
+        ↓
+    DON'T CLOSE
+```
+
+Visual:
+
+``` text
+┌──────────────────────────────────┐
+│                                  │
+│  CLICK BACKDROP → CLOSE          │
+│                                  │
+│       ┌────────────────┐         │
+│       │                │         │
+│       │     MODAL      │         │
+│       │                │         │
+│       │  CLICK HERE    │         │
+│       │  → DON'T CLOSE │         │
+│       │                │         │
+│       └────────────────┘         │
+│                                  │
+│  CLICK BACKDROP → CLOSE          │
+│                                  │
+└──────────────────────────────────┘
+```
+
+------------------------------------------------------------------------
+
+# 🎨 1️⃣3️⃣ What Is `.modal-overlay`?
 
 ``` css
 .modal-overlay {
@@ -155,13 +786,15 @@ There are two important parts:
 }
 ```
 
+The overlay is the **full-screen layer behind the popup**.
+
 ### `position: fixed`
 
-The overlay is positioned relative to the browser viewport.
+Keeps it positioned relative to the browser viewport.
 
 ### `inset: 0`
 
-This is shorthand for:
+Shorthand for:
 
 ``` css
 top: 0;
@@ -170,7 +803,7 @@ bottom: 0;
 left: 0;
 ```
 
-So it covers the entire screen.
+Therefore it covers the entire screen.
 
 ### `background`
 
@@ -178,7 +811,7 @@ So it covers the entire screen.
 background: rgba(0, 0, 0, 0.7);
 ```
 
-Creates a black transparent layer.
+Creates a black transparent background.
 
 ### `display: grid`
 
@@ -186,11 +819,11 @@ Makes the overlay a CSS Grid container.
 
 ### `place-items: center`
 
-Centers the modal content horizontally and vertically.
+Centers the popup.
 
 ------------------------------------------------------------------------
 
-# 🫥 4. `.hidden` --- How Do We Hide the Modal?
+# 🫥 1️⃣4️⃣ What Is `.hidden`?
 
 ``` css
 .hidden {
@@ -198,7 +831,7 @@ Centers the modal content horizontally and vertically.
 }
 ```
 
-When the modal has:
+When HTML contains:
 
 ``` html
 class="modal-overlay hidden"
@@ -212,7 +845,9 @@ display: none;
 
 Therefore:
 
-> The modal is invisible.
+``` text
+MODAL → HIDDEN
+```
 
 When JavaScript removes `hidden`:
 
@@ -224,414 +859,45 @@ the modal becomes visible.
 
 ------------------------------------------------------------------------
 
-# 🖱️ 5. What Is `onclick`?
+# 🪟 1️⃣5️⃣ `modal-overlay` vs `modal-content`
 
-`onclick` means:
-
-> **Run some JavaScript when the element is clicked.**
-
-Example:
-
-``` html
-<button onclick="hello()">
-    Click Me
-</button>
-```
-
-When clicked:
-
-``` javascript
-hello();
-```
-
-runs.
-
-### Important
-
-`onclick` is **not only for buttons**.
-
-A `<div>` can also have `onclick`:
-
-``` html
-<div onclick="hello()">
-    Click me
-</div>
-```
-
-Other elements can also respond to click events.
-
-------------------------------------------------------------------------
-
-# 🎯 6. `onclick="toggleModal(true)"`
-
-Our opening button:
-
-``` html
-<button onclick="toggleModal(true)">
-    Open Promo Modal
-</button>
-```
-
-When clicked:
-
-``` javascript
-toggleModal(true);
-```
-
-The function receives:
-
-``` text
-show = true
-```
-
-The word `true` means:
-
-> We want to show the modal.
-
-------------------------------------------------------------------------
-
-# ⚙️ 7. Understanding `toggleModal(show)`
-
-``` javascript
-function toggleModal(show) {
-    document
-        .getElementById("demoModal")
-        .classList
-        .toggle("hidden", !show);
-}
-```
-
-Let's break it down.
-
-------------------------------------------------------------------------
-
-## Step 1 --- `document`
-
-``` javascript
-document
-```
-
-Represents the current HTML webpage.
-
-------------------------------------------------------------------------
-
-## Step 2 --- `getElementById()`
-
-``` javascript
-document.getElementById("demoModal")
-```
-
-Finds the HTML element whose ID is:
-
-``` html
-id="demoModal"
-```
-
-So JavaScript gets:
-
-``` html
-<div id="demoModal">
-```
-
-------------------------------------------------------------------------
-
-## Step 3 --- `classList`
-
-``` javascript
-element.classList
-```
-
-`classList` gives JavaScript access to the CSS classes attached to an
-element.
-
-Example:
-
-``` html
-<div class="modal-overlay hidden">
-```
-
-The element has:
+This distinction is important.
 
 ``` text
 modal-overlay
-hidden
+      │
+      └── modal-content
 ```
 
-------------------------------------------------------------------------
-
-## Step 4 --- `toggle()`
-
-``` javascript
-classList.toggle("hidden", !show);
-```
-
-The second argument tells `toggle()` what to do.
-
-### Rule
+### `modal-overlay`
 
 ``` text
-true  → add the class
-false → remove the class
+Full-screen layer
 ```
 
-------------------------------------------------------------------------
-
-# ❗ 8. What Does `!show` Mean?
-
-`!` means **NOT**.
-
-Therefore:
+### `modal-content`
 
 ``` text
-!true  → false
-!false → true
+Actual popup box
 ```
 
-This is the trick that makes the function work.
-
-### Opening
-
-``` javascript
-toggleModal(true);
-```
-
-Inside the function:
-
-``` text
-show  = true
-!show = false
-```
-
-Therefore:
-
-``` javascript
-classList.toggle("hidden", false);
-```
-
-The `hidden` class is removed.
-
-``` text
-MODAL → VISIBLE 👀
-```
-
-### Closing
-
-``` javascript
-toggleModal(false);
-```
-
-Inside:
-
-``` text
-show  = false
-!show = true
-```
-
-Therefore:
-
-``` javascript
-classList.toggle("hidden", true);
-```
-
-The `hidden` class is added.
-
-``` text
-MODAL → HIDDEN 🙈
-```
-
-------------------------------------------------------------------------
-
-# 📊 9. The Most Important Table
-
-  Code                      `show`   `!show` `hidden`   Result
-  ---------------------- --------- --------- ---------- ---------
-  `toggleModal(true)`       `true`   `false` Removed    👀 Show
-  `toggleModal(false)`     `false`    `true` Added      🙈 Hide
-
-### Easy memory trick
-
-``` text
-true  → SHOW
-false → HIDE
-```
-
-The function converts that into:
-
-``` text
-SHOW → remove "hidden"
-HIDE → add "hidden"
-```
-
-------------------------------------------------------------------------
-
-# 🖼️ 10. Why Is There a `modal-content` Div?
-
-We have:
+Example:
 
 ``` html
-<div id="demoModal" class="modal-overlay">
+<div class="modal-overlay">
 
     <div class="modal-content">
-        ...
+        Popup content
     </div>
 
 </div>
 ```
 
-Think of it as:
-
-``` text
-demoModal
-│
-└── modal-content
-```
-
-The outer element is the **overlay**.
-
-The inner element is the **actual popup**.
-
 ------------------------------------------------------------------------
 
-# 🖱️ 11. What Does `onclick="closeOnBackdrop(event)"` Do?
+# ⏱️ 1️⃣6️⃣ `setTimeout()`
 
-The overlay contains:
-
-``` html
-onclick="closeOnBackdrop(event)"
-```
-
-Meaning:
-
-> When the overlay is clicked, call `closeOnBackdrop()` and pass the
-> click event.
-
-``` javascript
-function closeOnBackdrop(e) {
-    ...
-}
-```
-
-Here:
-
-``` text
-event → e
-```
-
-`e` is simply a variable containing information about the click.
-
-------------------------------------------------------------------------
-
-# 🎯 12. What Is `event.target`?
-
-``` javascript
-e.target
-```
-
-means:
-
-> **The exact HTML element that was clicked.**
-
-For example:
-
-### Click the background
-
-``` text
-e.target
-   ↓
-#demoModal
-```
-
-### Click the popup
-
-``` text
-e.target
-   ↓
-.modal-content
-```
-
-### Click the close button
-
-``` text
-e.target
-   ↓
-button
-```
-
-------------------------------------------------------------------------
-
-# 🔍 13. Understanding the `if`
-
-``` javascript
-if (e.target.id === "demoModal") {
-    toggleModal(false);
-}
-```
-
-This asks:
-
-> Was the exact element clicked the modal overlay?
-
-If yes:
-
-``` javascript
-toggleModal(false);
-```
-
-Close the modal.
-
-If no:
-
-Do nothing.
-
-------------------------------------------------------------------------
-
-# 💡 14. Why Check `e.target.id`?
-
-Without this check, clicking anywhere inside the overlay could
-potentially close the modal.
-
-We want:
-
-``` text
-CLICK OUTSIDE POPUP
-       ↓
-     CLOSE
-```
-
-but:
-
-``` text
-CLICK INSIDE POPUP
-       ↓
-    DON'T CLOSE
-```
-
-Visual:
-
-``` text
-┌─────────────────────────────────┐
-│                                 │
-│     CLICK → CLOSE               │
-│                                 │
-│       ┌─────────────────┐       │
-│       │                 │       │
-│       │     MODAL       │       │
-│       │                 │       │
-│       │     CLICK       │       │
-│       │     HERE        │       │
-│       │                 │       │
-│       └─────────────────┘       │
-│                                 │
-│     CLICK → CLOSE               │
-│                                 │
-└─────────────────────────────────┘
-```
-
-------------------------------------------------------------------------
-
-# ⏱️ 15. What Is `setTimeout()`?
-
-``` javascript
+``` js
 setTimeout(() => {
     toggleModal(true);
 }, 4000);
@@ -639,7 +905,7 @@ setTimeout(() => {
 
 `setTimeout()` means:
 
-> Run some code after a specified amount of time.
+> Execute code after a specified delay.
 
 Here:
 
@@ -663,60 +929,287 @@ MODAL OPENS
 
 ------------------------------------------------------------------------
 
-# 🔄 16. Complete Program Flow
+# 🔄 1️⃣7️⃣ Complete Modal Flow
 
 ``` text
-                  PAGE LOAD
-                      │
-                      ▼
-             ┌─────────────────┐
-             │ setTimeout()     │
-             │ Wait 4 seconds   │
-             └────────┬────────┘
-                      │
-                      ▼
-              toggleModal(true)
-                      │
-                      ▼
-              Remove "hidden"
-                      │
-                      ▼
-                MODAL SHOWS
-                      │
-          ┌───────────┴───────────┐
-          │                       │
-          ▼                       ▼
-    Click Close             Click Backdrop
-          │                       │
-          ▼                       ▼
- toggleModal(false)       closeOnBackdrop()
-                                  │
-                                  ▼
-                         Check e.target.id
-                                  │
-                                  ▼
-                       Is it "demoModal"?
-                                  │
-                                  ▼
-                         toggleModal(false)
-                                  │
-                                  ▼
-                           MODAL HIDES
+                    PAGE LOAD
+                        │
+                        ▼
+                 setTimeout()
+                        │
+                  Wait 4 sec
+                        │
+                        ▼
+               toggleModal(true)
+                        │
+                        ▼
+                Remove "hidden"
+                        │
+                        ▼
+                  MODAL SHOWS
+                        │
+             ┌──────────┴──────────┐
+             │                     │
+             ▼                     ▼
+       Click Close           Click Backdrop
+             │                     │
+             ▼                     ▼
+    toggleModal(false)      closeOnBackdrop(e)
+             │                     │
+             │                     ▼
+             │              e.target.id
+             │                     │
+             │                     ▼
+             │             === "demoModal"?
+             │                     │
+             └──────────┬──────────┘
+                        ▼
+                 Add "hidden"
+                        │
+                        ▼
+                  MODAL HIDES
 ```
 
 ------------------------------------------------------------------------
 
-# 🧪 17. Practice Examples
+# 🧪 1️⃣8️⃣ Example Walkthrough
 
-## Example 1 --- Show the modal
+Suppose the page loads.
 
-``` javascript
+Initially:
+
+``` html
+<div id="demoModal" class="modal-overlay hidden">
+```
+
+The `hidden` class means:
+
+``` text
+MODAL HIDDEN
+```
+
+After 4 seconds:
+
+``` js
 toggleModal(true);
 ```
 
-Question:
+Inside:
 
-**What happens?**
+``` text
+show = true
+!show = false
+```
+
+Therefore:
+
+``` js
+classList.toggle("hidden", false);
+```
+
+The `hidden` class is removed.
+
+Result:
+
+``` text
+MODAL VISIBLE
+```
+
+Now the user clicks the dark background.
+
+``` js
+closeOnBackdrop(event)
+```
+
+runs.
+
+If:
+
+``` js
+e.target.id === "demoModal"
+```
+
+then:
+
+``` js
+toggleModal(false);
+```
+
+runs.
+
+Result:
+
+``` text
+MODAL HIDDEN
+```
+
+------------------------------------------------------------------------
+
+# 🧠 1️⃣9️⃣ Important JavaScript Concepts
+
+## `getElementById()`
+
+``` js
+document.getElementById("demoModal");
+```
+
+> Find one element using its ID.
+
+------------------------------------------------------------------------
+
+## `classList`
+
+``` js
+element.classList;
+```
+
+> Access the element's CSS classes.
+
+------------------------------------------------------------------------
+
+## `toggle()`
+
+``` js
+element.classList.toggle("hidden", true);
+```
+
+> Add/remove a class based on a condition.
+
+------------------------------------------------------------------------
+
+## `onclick`
+
+``` html
+onclick="hello()"
+```
+
+> Run code when clicked.
+
+------------------------------------------------------------------------
+
+## `event`
+
+``` js
+function hello(event) {}
+```
+
+> Contains information about the event.
+
+------------------------------------------------------------------------
+
+## `event.target`
+
+``` js
+event.target;
+```
+
+> The exact element that triggered the event.
+
+------------------------------------------------------------------------
+
+## `setTimeout()`
+
+``` js
+setTimeout(function, 4000);
+```
+
+> Execute code after 4 seconds.
+
+------------------------------------------------------------------------
+
+# 📊 2️⃣0️⃣ Quick Revision Cheat Sheet
+
+  Method / Concept        Remember
+  ----------------------- -----------------------
+  `onclick`               Runs when clicked
+  `event`                 Event information
+  `event.target`          Exact clicked element
+  `.id`                   Get element ID
+  `getElementById()`      Find element by ID
+  `classList`             Work with CSS classes
+  `classList.add()`       Add class
+  `classList.remove()`    Remove class
+  `classList.toggle()`    Add/remove class
+  `!`                     NOT
+  `true`                  Yes / show
+  `false`                 No / hide
+  `setTimeout()`          Delay execution
+  `display: none`         Hide element
+  `position: fixed`       Viewport positioning
+  `inset: 0`              Fill viewport
+  `place-items: center`   Center grid content
+
+------------------------------------------------------------------------
+
+# 🎯 2️⃣1️⃣ Accenture Coding Round Pattern
+
+For similar frontend questions, remember:
+
+``` text
+USER ACTION
+     ↓
+DOM EVENT
+     ↓
+SELECT ELEMENT
+     ↓
+READ STATE / VALUE
+     ↓
+PROCESS LOGIC
+     ↓
+UPDATE DOM
+     ↓
+UI CHANGES
+```
+
+For this modal:
+
+``` text
+Click Open
+    ↓
+onclick
+    ↓
+toggleModal(true)
+    ↓
+getElementById()
+    ↓
+classList.toggle()
+    ↓
+Remove "hidden"
+    ↓
+Modal appears
+```
+
+For backdrop:
+
+``` text
+Click backdrop
+    ↓
+onclick
+    ↓
+closeOnBackdrop(event)
+    ↓
+event.target
+    ↓
+Check ID
+    ↓
+toggleModal(false)
+    ↓
+Modal disappears
+```
+
+------------------------------------------------------------------------
+
+# 🧪 2️⃣2️⃣ Practice Questions
+
+### Question 1
+
+What happens?
+
+``` js
+toggleModal(true);
+```
+
+**Think first.**
 
 ```{=html}
 <details>
@@ -728,9 +1221,11 @@ Question:
 ```{=html}
 </summary>
 ```
-`show = true`, so `!show = false`.
+`show = true`.
 
-`hidden` is removed.
+Therefore `!show = false`.
+
+The `hidden` class is removed.
 
 The modal becomes visible.
 
@@ -740,15 +1235,15 @@ The modal becomes visible.
 
 ------------------------------------------------------------------------
 
-## Example 2 --- Hide the modal
+### Question 2
 
-``` javascript
+What happens?
+
+``` js
 toggleModal(false);
 ```
 
-Question:
-
-**What happens?**
+**Think first.**
 
 ```{=html}
 <details>
@@ -760,9 +1255,11 @@ Question:
 ```{=html}
 </summary>
 ```
-`show = false`, so `!show = true`.
+`show = false`.
 
-`hidden` is added.
+Therefore `!show = true`.
+
+The `hidden` class is added.
 
 The modal becomes hidden.
 
@@ -772,283 +1269,294 @@ The modal becomes hidden.
 
 ------------------------------------------------------------------------
 
-## Example 3 --- What does this return?
+### Question 3
 
-``` javascript
+What does this mean?
+
+``` js
 !true
 ```
 
-Answer:
-
+```{=html}
+<details>
+```
+```{=html}
+<summary>
+```
+💡 Reveal Answer
+```{=html}
+</summary>
+```
 ``` text
 false
 ```
 
-And:
-
-``` javascript
-!false
-```
-
-returns:
-
-``` text
-true
+```{=html}
+</details>
 ```
 
 ------------------------------------------------------------------------
 
-# 🧠 18. Accenture Exam Cheat Sheet
+### Question 4
 
-  Concept                 Meaning
-  ----------------------- -------------------------------
-  `onclick`               Runs code when clicked
-  `event`                 Information about an event
-  `e.target`              Exact element clicked
-  `e.target.id`           ID of clicked element
-  `document`              Current HTML document
-  `getElementById()`      Finds an element by ID
-  `classList`             Access/manipulate CSS classes
-  `classList.add()`       Add a class
-  `classList.remove()`    Remove a class
-  `classList.toggle()`    Add/remove a class
-  `!`                     NOT operator
-  `true`                  Yes / enabled
-  `false`                 No / disabled
-  `setTimeout()`          Execute code after a delay
-  `4000 ms`               4 seconds
-  `display: none`         Hide element
-  `position: fixed`       Position relative to viewport
-  `inset: 0`              Fill all four sides
-  `place-items: center`   Center grid content
+What does this do?
 
-------------------------------------------------------------------------
-
-# ⚡ 19. `classList.toggle()` --- Important
-
-There are two common forms.
-
-### Without second argument
-
-``` javascript
-element.classList.toggle("hidden");
+``` js
+document.getElementById("demoModal");
 ```
 
-If the class exists:
-
-``` text
-hidden → removed
+```{=html}
+<details>
 ```
-
-If it doesn't exist:
-
-``` text
-hidden → added
+```{=html}
+<summary>
 ```
-
-### With second argument
-
-``` javascript
-element.classList.toggle("hidden", true);
+💡 Reveal Answer
+```{=html}
+</summary>
 ```
+It finds the HTML element whose ID is `demoModal`.
 
-Always add:
-
-``` text
-hidden → added
-```
-
-And:
-
-``` javascript
-element.classList.toggle("hidden", false);
-```
-
-Always remove:
-
-``` text
-hidden → removed
-```
-
-This second form is particularly useful when your state is stored in a
-variable such as `show`.
-
-------------------------------------------------------------------------
-
-# 🧱 20. Three Layers to Remember
-
-When building DOM/UI questions, think in three layers:
-
-``` text
-HTML
- ↓
-Structure
-
-CSS
- ↓
-Appearance
-
-JavaScript
- ↓
-Behavior
-```
-
-For this project:
-
-``` text
-HTML
-├── Button
-├── Overlay
-└── Modal content
-
-CSS
-├── Center modal
-├── Dark background
-└── Hide/show class
-
-JavaScript
-├── Open
-├── Close
-├── Backdrop click
-└── Automatic opening
+```{=html}
+</details>
 ```
 
 ------------------------------------------------------------------------
 
-# 🎯 21. One-Minute Revision
+### Question 5
 
-If you only have one minute before the test, remember this:
+What does this mean?
 
-``` javascript
-function toggleModal(show) {
-    document
-        .getElementById("demoModal")
-        .classList
-        .toggle("hidden", !show);
-}
+``` js
+e.target
 ```
 
-Means:
-
-``` text
-Find modal
-   ↓
-Access classes
-   ↓
-Add/remove hidden
-   ↓
-Show or hide modal
+```{=html}
+<details>
 ```
-
-And:
-
-``` javascript
-function closeOnBackdrop(e) {
-    if (e.target.id === "demoModal") {
-        toggleModal(false);
-    }
-}
+```{=html}
+<summary>
 ```
-
-Means:
-
-``` text
-Check what was clicked
-        ↓
-Was it the backdrop?
-        ↓
-YES → close
+💡 Reveal Answer
+```{=html}
+</summary>
 ```
+It refers to the exact element that was clicked.
 
-And:
-
-``` javascript
-setTimeout(() => toggleModal(true), 4000);
-```
-
-Means:
-
-``` text
-Wait 4 seconds
-      ↓
-Open modal
+```{=html}
+</details>
 ```
 
 ------------------------------------------------------------------------
 
-# 🚀 22. Mini Challenges
+# 🚀 2️⃣3️⃣ Mini Challenges
 
-Try these without looking at the answers.
+Try these without looking at the solution.
 
-### Challenge 1
+### Challenge 1 --- Change the Timer
 
-Change the automatic opening time from **4 seconds to 2 seconds**.
+Change:
 
-### Challenge 2
+``` js
+4000
+```
 
-Create a button that says:
+to make the modal open after **2 seconds**.
+
+------------------------------------------------------------------------
+
+### Challenge 2 --- New Button
+
+Create a button:
 
 ``` text
 Open Login
 ```
 
-and opens the same modal.
+that opens the modal.
 
-### Challenge 3
+------------------------------------------------------------------------
 
-Change the modal text to:
+### Challenge 3 --- Change Content
+
+Change the modal to:
 
 ``` text
 Welcome Back!
 Please login to continue.
 ```
 
-### Challenge 4
+------------------------------------------------------------------------
 
-Make the modal close when the user presses the **Escape key**.
+### Challenge 4 --- Escape Key
 
-### Challenge 5
+Add functionality so pressing:
 
-Add an input field and a Submit button inside the modal.
+``` text
+ESC
+```
+
+closes the modal.
 
 ------------------------------------------------------------------------
 
-# 🏁 Final Mental Model
+### Challenge 5 --- Form
+
+Add:
+
+``` text
+Email
+Password
+Login Button
+```
+
+inside the modal.
+
+------------------------------------------------------------------------
+
+# ⭐ 2️⃣4️⃣ Most Important Pattern
+
+For DOM questions, remember:
+
+``` text
+FIND
+ ↓
+READ
+ ↓
+PROCESS
+ ↓
+UPDATE
+```
+
+For this project:
+
+``` js
+document.getElementById("demoModal")
+```
+
+### FIND
+
+Find the modal.
+
+``` js
+classList
+```
+
+### ACCESS
+
+Access its CSS classes.
+
+``` js
+toggle("hidden", !show)
+```
+
+### PROCESS
+
+Add/remove the hidden state.
+
+``` text
+UI changes
+```
+
+### RESULT
+
+The user sees or doesn't see the modal.
+
+------------------------------------------------------------------------
+
+# 🏆 2️⃣5️⃣ Final Mental Model
+
+Don't memorize the entire code.
+
+Remember:
 
 ``` text
 HTML
-  │
-  ├── onclick → user interaction
-  │
-  ▼
-JavaScript
-  │
-  ├── getElementById()
-  ├── classList
-  ├── toggle()
-  ├── event.target
-  └── setTimeout()
-  │
-  ▼
+  ↓
+STRUCTURE
+
 CSS
-  │
-  ├── .modal-overlay
-  ├── .modal-content
-  └── .hidden
-  │
-  ▼
-VISIBLE / HIDDEN UI
+  ↓
+APPEARANCE
+
+JAVASCRIPT
+  ↓
+BEHAVIOR
 ```
 
-> **Core idea:** JavaScript changes the HTML's CSS classes. The CSS
-> classes control what the user sees.
+And the JavaScript flow:
+
+``` text
+CLICK
+  ↓
+EVENT
+  ↓
+FIND ELEMENT
+  ↓
+CHECK STATE
+  ↓
+CHANGE CLASS
+  ↓
+UI UPDATES
+```
+
+The most important line:
+
+``` js
+document.getElementById("demoModal")
+    .classList.toggle("hidden", !show);
+```
+
+Think:
+
+``` text
+Find modal
+    ↓
+Access classes
+    ↓
+Add/remove "hidden"
+    ↓
+Show/hide modal
+```
 
 ------------------------------------------------------------------------
 
-::: {align="center"}
-### 💪 Learn the concept, don't memorize the code.
+```{=html}
+<p align="center">
+```
+`<b>`{=html}💡 Don't memorize the code. Understand the
+flow.`</b>`{=html}
 
-**DOM → Event → Class → UI**
+```{=html}
+</p>
+```
+```{=html}
+<p align="center">
+```
+`<b>`{=html}Click → Event → Find Element → Change Class → UI
+Update`</b>`{=html}
 
+```{=html}
+</p>
+```
+```{=html}
+<p align="center">
+```
+⭐ `<i>`{=html}Practice rebuilding this without looking at the
+solution.`</i>`{=html} ⭐
 
-:::
+```{=html}
+</p>
+```
+
+------------------------------------------------------------------------
+
+```{=html}
+<p align="center">
+```
+`<sub>`{=html}Built for JavaScript DOM practice and Accenture placement
+preparation 🚀`</sub>`{=html}
+
+```{=html}
+</p>
+```
