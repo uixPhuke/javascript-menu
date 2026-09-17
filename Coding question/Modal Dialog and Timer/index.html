@@ -1,0 +1,17 @@
+<html>
+    <head>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<button onclick="toggleModal(true)">Open Promo Modal</button>
+
+<div id="demoModal" class="modal-overlay hidden" onclick="closeOnBackdrop(event)">
+  <div class="modal-content">
+    <h3>🔥 Exclusive Offer!</h3>
+    <p>Get 20% Off your purchase!</p>
+    <button onclick="toggleModal(false)">Close</button>
+  </div>
+</div>
+</body>
+<script src="app.js"></script>
+</html>
